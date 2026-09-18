@@ -1,10 +1,10 @@
-# menuet
+# Menuet
 
 English | [Français](README_fr.md) | [Deutsch](README_de.md) | [Italiano](README_it.md) | [Español](README_es.md) | [Português (Brasil)](README_pt-BR.md) | [日本語](README_ja.md) | [简体中文](README_zh-Hans.md) | [繁體中文](README_zh-Hant.md)
 
-`menuet` is a specialized fork of [MenuLibre](https://github.com/bluesabre/menulibre) focused on desktop menu management and launcher recovery under **Linux Mint Cinnamon**.
+`Menuet` is a specialized fork of [MenuLibre](https://github.com/bluesabre/menulibre) focused on desktop menu management and launcher recovery under **Linux Mint Cinnamon**.
 
-Unlike the upstream project, which aims to support multiple desktop environments (DEs), `menuet` is specifically designed for the Cinnamon desktop environment and **Cinnamon Menu**. When a `.desktop` launcher is not accepted or displayed by Cinnamon Menu, `menuet` preserves the file and collects it in an **Unregistered Apps** folder at the top of the menu tree. Users can then inspect and edit the launcher before attempting to re-register it. `menuet` also provides virtual tree mapping and menu cache refresh mechanisms to help recover launchers that are not displayed correctly in Cinnamon Menu.
+Unlike the upstream project, which aims to support multiple desktop environments (DEs), `Menuet` is specifically designed for the Cinnamon desktop environment and **Cinnamon Menu**. When a `.desktop` launcher is not accepted or displayed by Cinnamon Menu, `Menuet` preserves the file and collects it in an **Unregistered Apps** folder at the top of the menu tree. Users can then inspect and edit the launcher before attempting to re-register it. `Menuet` also provides virtual tree mapping and menu cache refresh mechanisms to help recover launchers that are not displayed correctly in Cinnamon Menu.
 
 ---
 
@@ -12,7 +12,7 @@ Unlike the upstream project, which aims to support multiple desktop environments
 
 Have you ever found that a `.desktop` file disappeared from Cinnamon Menu, or that a newly installed or compiled application did not appear in the menu tree?
 
-`menuet` provides a direct way to recover launchers not accepted or displayed by Cinnamon Menu by collecting them in the **Unregistered Apps** folder while preserving their `.desktop` files. Users can inspect, edit, and re-register these launchers, providing a straightforward recovery path for applications that would otherwise be difficult to find in the application menu.
+`Menuet` provides a direct way to recover launchers not accepted or displayed by Cinnamon Menu by collecting them in the **Unregistered Apps** folder while preserving their `.desktop` files. Users can inspect, edit, and re-register these launchers, providing a straightforward recovery path for applications that would otherwise be difficult to find in the application menu.
 
 ---
 
@@ -26,7 +26,7 @@ The screenshot shows the `Unregistered Apps` folder at the top of the menu tree,
 
 ## 🛠️ Features & Technical Overview
 
-`menuet` introduces a custom tree model (`MenuetTreeWrapper`) and cache refresh routines to provide the following features:
+`Menuet` introduces a custom tree model (`MenuetTreeWrapper`) and cache refresh routines to provide the following features:
 
 ### 1. Unregistered Apps Node
 Applications whose `.desktop` files exist but are not displayed in the Cinnamon Menu are collected as **Unregistered Apps** and displayed at the top of the custom tree view.
@@ -43,7 +43,7 @@ Provides a refresh action that applies desktop changes to the Cinnamon Menu Shel
 
 ## 🔄 Menu Control Architecture
 
-The following diagram illustrates how `menuet` tracks `.desktop` launchers, preserves unregistered entries, and refreshes the menu and cache state.
+The following diagram illustrates how `Menuet` tracks `.desktop` launchers, preserves unregistered entries, and refreshes the menu and cache state.
 
 ```mermaid
 flowchart TD
@@ -72,7 +72,7 @@ flowchart TD
 
 ⚠️ **Linux Mint Cinnamon is the ONLY supported operating system and desktop environment.**
 
-`menuet` relies on Cinnamon-specific menu files, libraries, and process behavior, including `cinnamon-applications.menu`.
+`Menuet` relies on Cinnamon-specific menu files, libraries, and process behavior, including `cinnamon-applications.menu`.
 
 The following setups are **explicitly unsupported**:
 - Linux Mint MATE / Xfce
@@ -84,7 +84,7 @@ Compatibility with unsupported setups is not a development goal, and PRs focusin
 
 ## 📦 Runtime Dependencies
 
-`menuet` relies deeply on specific packages available in the Linux Mint Cinnamon environment:
+`Menuet` relies deeply on specific packages available in the Linux Mint Cinnamon environment:
 
 - **Python 3** & **PyGObject** (`python3-gi`)
 - **GTK 3** & **GTKSourceView 3**
@@ -92,14 +92,14 @@ Compatibility with unsupported setups is not a development goal, and PRs focusin
 - **`xdg-utils`** (Specifically utilizing `xdg-desktop-menu` to install, uninstall, and update desktop menu entries)
 - **`python3-psutil`** (For process detection and management)
 
-Because `menuet` assumes a standard Linux Mint ecosystem, it does not package alternative fallbacks for these components.
+Because `Menuet` assumes a standard Linux Mint ecosystem, it does not package alternative fallbacks for these components.
 
 ---
 
 ## 📜 License & Credits
 
-`menuet` is licensed under the GNU General Public License version 3 (GPL-3.0).
+`Menuet` is licensed under the GNU General Public License version 3 (GPL-3.0).
 
-`menuet` is a fork of MenuLibre by bluesabre.
+`Menuet` is a fork of MenuLibre by bluesabre.
 
 - **Original Project**: [MenuLibre by bluesabre](https://github.com/bluesabre/menulibre)

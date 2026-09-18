@@ -1,10 +1,10 @@
-# menuet
+# Menuet
 
 [English](README.md) | [Français](README_fr.md) | [Deutsch](README_de.md) | [Italiano](README_it.md) | [Español](README_es.md) | [Português (Brasil)](README_pt-BR.md) | [日本語](README_ja.md) | 简体中文 | [繁體中文](README_zh-Hant.md)
 
-`menuet` 是 [MenuLibre](https://github.com/bluesabre/menulibre) 的一个专用 fork，专注于在 **Linux Mint Cinnamon** 下进行桌面菜单管理和启动器恢复。
+`Menuet` 是 [MenuLibre](https://github.com/bluesabre/menulibre) 的一个专用 fork，专注于在 **Linux Mint Cinnamon** 下进行桌面菜单管理和启动器恢复。
 
-与旨在支持多个桌面环境（DE）的上游项目不同，`menuet` 专门为 Cinnamon 桌面环境和 **Cinnamon Menu** 设计。当 `.desktop` 启动器未被 Cinnamon Menu 接受或显示时，`menuet` 会保留该文件，并将其归入菜单树顶部的 **未注册应用** 文件夹中。随后，用户可以在尝试重新注册启动器之前对其进行检查和编辑。`menuet` 还提供虚拟树映射和菜单缓存刷新机制，以帮助恢复在 Cinnamon Menu 中未正确显示的启动器。
+与旨在支持多个桌面环境（DE）的上游项目不同，`Menuet` 专门为 Cinnamon 桌面环境和 **Cinnamon Menu** 设计。当 `.desktop` 启动器未被 Cinnamon Menu 接受或显示时，`Menuet` 会保留该文件，并将其归入菜单树顶部的 **未注册应用** 文件夹中。随后，用户可以在尝试重新注册启动器之前对其进行检查和编辑。`Menuet` 还提供虚拟树映射和菜单缓存刷新机制，以帮助恢复在 Cinnamon Menu 中未正确显示的启动器。
 
 ---
 
@@ -12,7 +12,7 @@
 
 您是否曾发现某个 `.desktop` 文件从 Cinnamon Menu 中消失了，或者新安装/编译的应用程序没有出现在菜单树中？
 
-`menuet` 提供了一种直接恢复未被 Cinnamon Menu 接受或显示的启动器的方法：将它们归入 **未注册应用** 文件夹中，同时保留其 `.desktop` 文件。用户可以检查、编辑并重新注册这些启动器，为那些在应用程序菜单中难以找到的应用提供了一条简便的恢复途径。
+`Menuet` 提供了一种直接恢复未被 Cinnamon Menu 接受或显示的启动器的方法：将它们归入 **未注册应用** 文件夹中，同时保留其 `.desktop` 文件。用户可以检查、编辑并重新注册这些启动器，为那些在应用程序菜单中难以找到的应用提供了一条简便的恢复途径。
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## 🛠️ 功能与技术概览
 
-`menuet` 引入了自定义树模型（`MenuetTreeWrapper`）以及缓存刷新例程，以实现以下功能：
+`Menuet` 引入了自定义树模型（`MenuetTreeWrapper`）以及缓存刷新例程，以实现以下功能：
 
 ### 1. 未注册应用 节点
 `.desktop` 文件存在但未显示在 Cinnamon Menu 中的应用程序，会被收集为 **未注册应用**，并显示在自定义树视图的顶部。
@@ -43,7 +43,7 @@
 
 ## 🔄 菜单控制架构
 
-下图说明了 `menuet` 如何跟踪 `.desktop` 启动器、保留未注册条目以及刷新菜单和缓存状态。
+下图说明了 `Menuet` 如何跟踪 `.desktop` 启动器、保留未注册条目以及刷新菜单和缓存状态。
 
 ```mermaid
 flowchart TD
@@ -72,7 +72,7 @@ flowchart TD
 
 ⚠️ **Linux Mint Cinnamon 是唯一受支持的操作系统和桌面环境。**
 
-`menuet` 依赖于 Cinnamon 特定的菜单文件、库和进程行为（包括 `cinnamon-applications.menu`）。
+`Menuet` 依赖于 Cinnamon 特定的菜单文件、库和进程行为（包括 `cinnamon-applications.menu`）。
 
 以下设置**明确不受支持**：
 - Linux Mint MATE / Xfce
@@ -84,7 +84,7 @@ flowchart TD
 
 ## 📦 运行时依赖项
 
-`menuet` 深度依赖于 Linux Mint Cinnamon 环境中可用的特定软件包：
+`Menuet` 深度依赖于 Linux Mint Cinnamon 环境中可用的特定软件包：
 
 - **Python 3** 与 **PyGObject**（`python3-gi`）
 - **GTK 3** 与 **GTKSourceView 3**
@@ -92,14 +92,14 @@ flowchart TD
 - **`xdg-utils`**（具体使用 `xdg-desktop-menu` 来安装、卸载和更新桌面菜单项）
 - **`python3-psutil`**（用于进程检测和管理）
 
-由于 `menuet` 假定使用标准的 Linux Mint 生态系统，因此它不会为这些组件打包替代的回退（fallback）方案。
+由于 `Menuet` 假定使用标准的 Linux Mint 生态系统，因此它不会为这些组件打包替代的回退（fallback）方案。
 
 ---
 
 ## 📜 许可证与鸣谢
 
-`menuet` 采用 GNU 通用公共许可证第 3 版 (GPL-3.0) 授权。
+`Menuet` 采用 GNU 通用公共许可证第 3 版 (GPL-3.0) 授权。
 
-`menuet` 是 bluesabre 的 MenuLibre 的一个分支。
+`Menuet` 是 bluesabre 的 MenuLibre 的一个分支。
 
 - **原始项目**：[MenuLibre by bluesabre](https://github.com/bluesabre/menulibre)

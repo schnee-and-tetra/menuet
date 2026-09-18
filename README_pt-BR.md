@@ -1,10 +1,10 @@
-# menuet
+# Menuet
 
 [English](README.md) | [Français](README_fr.md) | [Deutsch](README_de.md) | [Italiano](README_it.md) | [Español](README_es.md) | Português (Brasil) | [日本語](README_ja.md) | [简体中文](README_zh-Hans.md) | [繁體中文](README_zh-Hant.md)
 
-`menuet` é uma bifurcação (fork) especializada do [MenuLibre](https://github.com/bluesabre/menulibre) focada no gerenciamento de menus de desktop e na recuperação de lançadores (launchers) sob o **Linux Mint Cinnamon**.
+`Menuet` é uma bifurcação (fork) especializada do [MenuLibre](https://github.com/bluesabre/menulibre) focada no gerenciamento de menus de desktop e na recuperação de lançadores (launchers) sob o **Linux Mint Cinnamon**.
 
-Ao contrário do projeto original, que visa dar suporte a vários ambientes de desktop (DEs), o `menuet` foi projetado especificamente para o ambiente de desktop Cinnamon e o **Cinnamon Menu**. Quando um lançador `.desktop` não é aceito ou exibido pelo Cinnamon Menu, o `menuet` preserva o arquivo e o coleta em uma pasta **Aplicativos não registrados** localizada na parte superior da árvore de menus. Os usuários podem inspecionar e editar o lançador antes de tentar registrá-lo novamente. O `menuet` também fornece mapeamento de árvores virtuais e mecanismos de atualização do cache de menus para ajudar a recuperar lançadores que não são exibidos corretamente no Cinnamon Menu.
+Ao contrário do projeto original, que visa dar suporte a vários ambientes de desktop (DEs), o `Menuet` foi projetado especificamente para o ambiente de desktop Cinnamon e o **Cinnamon Menu**. Quando um lançador `.desktop` não é aceito ou exibido pelo Cinnamon Menu, o `Menuet` preserva o arquivo e o coleta em uma pasta **Aplicativos não registrados** localizada na parte superior da árvore de menus. Os usuários podem inspecionar e editar o lançador antes de tentar registrá-lo novamente. O `Menuet` também fornece mapeamento de árvores virtuais e mecanismos de atualização do cache de menus para ajudar a recuperar lançadores que não são exibidos corretamente no Cinnamon Menu.
 
 ---
 
@@ -12,7 +12,7 @@ Ao contrário do projeto original, que visa dar suporte a vários ambientes de d
 
 Você já percebeu que um arquivo `.desktop` desapareceu do Cinnamon Menu, ou que um aplicativo recém-instalado ou compilado não apareceu na árvore de menus?
 
-O `menuet` oferece uma maneira direta de recuperar lançadores que não foram aceitos ou exibidos pelo Cinnamon Menu, coletando-os na pasta **Aplicativos não registrados** enquanto preserva seus arquivos `.desktop`. Os usuários podem inspecionar, editar e registrar novamente esses lançadores, fornecendo um caminho de recuperação simples para aplicativos que seriam difíceis de encontrar no menu de aplicativos.
+O `Menuet` oferece uma maneira direta de recuperar lançadores que não foram aceitos ou exibidos pelo Cinnamon Menu, coletando-os na pasta **Aplicativos não registrados** enquanto preserva seus arquivos `.desktop`. Os usuários podem inspecionar, editar e registrar novamente esses lançadores, fornecendo um caminho de recuperação simples para aplicativos que seriam difíceis de encontrar no menu de aplicativos.
 
 ---
 
@@ -26,7 +26,7 @@ A captura de tela mostra a pasta `Aplicativos não registrados` na parte superio
 
 ## 🛠️ Recursos e Visão Geral Técnica
 
-`menuet` introduz um modelo de árvore personalizado (`MenuetTreeWrapper`) e rotinas de atualização de cache para fornecer os seguintes recursos:
+`Menuet` introduz um modelo de árvore personalizado (`MenuetTreeWrapper`) e rotinas de atualização de cache para fornecer os seguintes recursos:
 
 ### 1. Nó Aplicativos não registrados
 Os aplicativos cujos arquivos `.desktop` existem, mas não são exibidos no Cinnamon Menu, são reunidos como **Aplicativos não registrados** e exibidos na parte superior da visualização em árvore personalizada.
@@ -43,7 +43,7 @@ Fornece uma ação de atualização que aplica as alterações do desktop ao Cin
 
 ## 🔄 Arquitetura de controle de menu
 
-O diagrama a seguir ilustra como o `menuet` rastreia os lançadores `.desktop`, preserva as entradas não registradas e atualiza o estado do menu e do cache.
+O diagrama a seguir ilustra como o `Menuet` rastreia os lançadores `.desktop`, preserva as entradas não registradas e atualiza o estado do menu e do cache.
 
 ```mermaid
 flowchart TD
@@ -72,7 +72,7 @@ flowchart TD
 
 ⚠️ **O Linux Mint Cinnamon é o ÚNICO sistema operacional e ambiente de desktop compatível.**
 
-O `menuet` depende de arquivos de menu, bibliotecas e comportamento de processos específicos do Cinnamon, incluindo `cinnamon-applications.menu`.
+O `Menuet` depende de arquivos de menu, bibliotecas e comportamento de processos específicos do Cinnamon, incluindo `cinnamon-applications.menu`.
 
 As seguintes configurações são **explicitamente incompatíveis**:
 - Linux Mint MATE / Xfce
@@ -84,7 +84,7 @@ A compatibilidade com configurações não suportadas não é um objetivo de des
 
 ## 📦 Dependências de Execução
 
-O `menuet` depende fortemente de pacotes específicos disponíveis no ambiente Linux Mint Cinnamon:
+O `Menuet` depende fortemente de pacotes específicos disponíveis no ambiente Linux Mint Cinnamon:
 
 - **Python 3** e **PyGObject** (`python3-gi`)
 - **GTK 3** e **GTKSourceView 3**
@@ -92,14 +92,14 @@ O `menuet` depende fortemente de pacotes específicos disponíveis no ambiente L
 - **`xdg-utils`** (Utiliza especificamente o `xdg-desktop-menu` para instalar, desinstalar e atualizar entradas do menu do desktop)
 - **`python3-psutil`** (Para detecção e gerenciamento de processos)
 
-Como o `menuet` assume um ecossistema Linux Mint padrão, ele não inclui alternativas de fallback para esses componentes.
+Como o `Menuet` assume um ecossistema Linux Mint padrão, ele não inclui alternativas de fallback para esses componentes.
 
 ---
 
 ## 📜 Licença e Créditos
 
-O `menuet` está licenciado sob a Licença Pública Geral GNU versão 3 (GPL-3.0).
+O `Menuet` está licenciado sob a Licença Pública Geral GNU versão 3 (GPL-3.0).
 
-O `menuet` é um fork do MenuLibre criado por bluesabre.
+O `Menuet` é um fork do MenuLibre criado por bluesabre.
 
 - **Projeto Original**: [MenuLibre por bluesabre](https://github.com/bluesabre/menulibre)

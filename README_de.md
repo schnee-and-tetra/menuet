@@ -1,10 +1,10 @@
-# menuet
+# Menuet
 
 [English](README.md) | [Français](README_fr.md) | Deutsch | [Italiano](README_it.md) | [Español](README_es.md) | [Português (Brasil)](README_pt-BR.md) | [日本語](README_ja.md) | [简体中文](README_zh-Hans.md) | [繁體中文](README_zh-Hant.md)
 
-`menuet` ist ein spezialisierter Fork von [MenuLibre](https://github.com/bluesabre/menulibre), der sich auf die Desktop-Menüverwaltung und die Wiederherstellung von Anwendungsstartern unter **Linux Mint Cinnamon** konzentriert.
+`Menuet` ist ein spezialisierter Fork von [MenuLibre](https://github.com/bluesabre/menulibre), der sich auf die Desktop-Menüverwaltung und die Wiederherstellung von Anwendungsstartern unter **Linux Mint Cinnamon** konzentriert.
 
-Im Gegensatz zum Upstream-Projekt, das darauf abzielt, mehrere Desktop-Umgebungen (DEs) zu unterstützen, wurde `menuet` speziell für die Cinnamon-Desktop-Umgebung und das **Cinnamon Menu** entwickelt. Wenn ein `.desktop`-Starter vom Cinnamon Menu während der Validierung nicht akzeptiert oder angezeigt wird, bewahrt `menuet` die Datei auf und sammelt sie in einem Ordner **Nicht registrierte Anwendungen** oben im Menübaum. Benutzer können den Starter dann überprüfen und bearbeiten, bevor sie versuchen, ihn erneut zu registrieren. `menuet` bietet außerdem virtuelle Baumzuordnungen und Mechanismen zur Aktualisierung des Menü-Caches, um Starter wiederherzustellen, die im Cinnamon Menu nicht korrekt angezeigt werden.
+Im Gegensatz zum Upstream-Projekt, das darauf abzielt, mehrere Desktop-Umgebungen (DEs) zu unterstützen, wurde `Menuet` speziell für die Cinnamon-Desktop-Umgebung und das **Cinnamon Menu** entwickelt. Wenn ein `.desktop`-Starter vom Cinnamon Menu während der Validierung nicht akzeptiert oder angezeigt wird, bewahrt `Menuet` die Datei auf und sammelt sie in einem Ordner **Nicht registrierte Anwendungen** oben im Menübaum. Benutzer können den Starter dann überprüfen und bearbeiten, bevor sie versuchen, ihn erneut zu registrieren. `Menuet` bietet außerdem virtuelle Baumzuordnungen und Mechanismen zur Aktualisierung des Menü-Caches, um Starter wiederherzustellen, die im Cinnamon Menu nicht korrekt angezeigt werden.
 
 ---
 
@@ -12,7 +12,7 @@ Im Gegensatz zum Upstream-Projekt, das darauf abzielt, mehrere Desktop-Umgebunge
 
 Haben Sie schon einmal bemerkt, dass eine `.desktop`-Datei aus dem Cinnamon Menu verschwunden ist oder dass eine neu installierte oder kompilierte Anwendung nicht im Menübaum auftaucht?
 
-`menuet` bietet eine direkte Möglichkeit, Starter wiederherzustellen, die vom Cinnamon Menu nicht akzeptiert oder angezeigt werden, indem sie im Ordner **Nicht registrierte Anwendungen** gesammelt werden, während ihre `.desktop`-Dateien erhalten bleiben. Benutzer können diese Starter überprüfen, bearbeiten und erneut registrieren, was einen unkomplizierten Wiederherstellungspfad für Anwendungen bietet, die im Anwendungsmenü sonst schwer zu finden wären.
+`Menuet` bietet eine direkte Möglichkeit, Starter wiederherzustellen, die vom Cinnamon Menu nicht akzeptiert oder angezeigt werden, indem sie im Ordner **Nicht registrierte Anwendungen** gesammelt werden, während ihre `.desktop`-Dateien erhalten bleiben. Benutzer können diese Starter überprüfen, bearbeiten und erneut registrieren, was einen unkomplizierten Wiederherstellungspfad für Anwendungen bietet, die im Anwendungsmenü sonst schwer zu finden wären.
 
 ---
 
@@ -26,7 +26,7 @@ Der Screenshot zeigt den Ordner `Nicht registrierte Anwendungen` oben im Menüba
 
 ## 🛠️ Funktionen & technische Übersicht
 
-`menuet` führt ein benutzerdefiniertes Baummodell (`MenuetTreeWrapper`) und Routinen zur Aktualisierung des Caches ein, um die folgenden Funktionen bereitzustellen:
+`Menuet` führt ein benutzerdefiniertes Baummodell (`MenuetTreeWrapper`) und Routinen zur Aktualisierung des Caches ein, um die folgenden Funktionen bereitzustellen:
 
 ### 1. Knoten „Nicht registrierte Anwendungen“
 Anwendungen, deren `.desktop`-Dateien vorhanden sind, die aber nicht im Cinnamon Menu angezeigt werden, werden als **Nicht registrierte Anwendungen** gesammelt und am oberen Rand der benutzerdefinierten Baumansicht angezeigt.
@@ -43,7 +43,7 @@ Stellt eine Aktualisierungsfunktion bereit, die Änderungen am Desktop auf die C
 
 ## 🔄 Menü-Steuerungsarchitektur
 
-Das folgende Diagramm veranschaulicht, wie `menuet` `.desktop`-Starter verfolgt, nicht registrierte Einträge beibehält und den Menü- und Cache-Status aktualisiert.
+Das folgende Diagramm veranschaulicht, wie `Menuet` `.desktop`-Starter verfolgt, nicht registrierte Einträge beibehält und den Menü- und Cache-Status aktualisiert.
 
 ```mermaid
 flowchart TD
@@ -72,7 +72,7 @@ flowchart TD
 
 ⚠️ **Linux Mint Cinnamon ist die EINZIGE unterstützte Betriebssystem- und Desktop-Umgebung.**
 
-`menuet` basiert auf Cinnamon-spezifischen Menüdateien, Bibliotheken und dem Prozessverhalten, einschließlich `cinnamon-applications.menu`.
+`Menuet` basiert auf Cinnamon-spezifischen Menüdateien, Bibliotheken und dem Prozessverhalten, einschließlich `cinnamon-applications.menu`.
 
 Die folgenden Setups werden **ausdrücklich nicht unterstützt**:
 - Linux Mint MATE / Xfce
@@ -84,7 +84,7 @@ Die Kompatibilität mit nicht unterstützten Setups ist kein Entwicklungsziel, u
 
 ## 📦 Laufzeitabhängigkeiten
 
-`menuet` stützt sich stark auf spezifische Pakete, die in der Linux Mint Cinnamon-Umgebung verfügbar sind:
+`Menuet` stützt sich stark auf spezifische Pakete, die in der Linux Mint Cinnamon-Umgebung verfügbar sind:
 
 - **Python 3** & **PyGObject** (`python3-gi`)
 - **GTK 3** & **GTKSourceView 3**
@@ -92,14 +92,14 @@ Die Kompatibilität mit nicht unterstützten Setups ist kein Entwicklungsziel, u
 - **`xdg-utils`** (Verwendet speziell `xdg-desktop-menu` zum Installieren, Deinstallieren und Aktualisieren von Desktop-Menüeinträgen)
 - **`python3-psutil`** (Für Prozesserkennung und -verwaltung)
 
-Da `menuet` von einem Standard-Linux Mint-Ökosystem ausgeht, sind keine alternativen Fallbacks für diese Komponenten enthalten.
+Da `Menuet` von einem Standard-Linux Mint-Ökosystem ausgeht, sind keine alternativen Fallbacks für diese Komponenten enthalten.
 
 ---
 
 ## 📜 Lizenz & Credits
 
-`menuet` ist unter der GNU General Public License Version 3 (GPL-3.0) lizenziert.
+`Menuet` ist unter der GNU General Public License Version 3 (GPL-3.0) lizenziert.
 
-`menuet` ist ein Fork von MenuLibre von bluesabre.
+`Menuet` ist ein Fork von MenuLibre von bluesabre.
 
 - **Ursprüngliches Projekt**: [MenuLibre von bluesabre](https://github.com/bluesabre/menulibre)
