@@ -1,0 +1,48 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-only
+#   Menu Editor & Launcher Recovery for Linux Mint Cinnamon
+#   Copyright (C) 2012-2024 Sean Davis <sean@bluesabre.org>
+#   Copyright (C) 2026 schnee-and-tetra <308144300+schnee-tetra@users.noreply.github.com>
+import gettext
+import locale
+import os
+import signal
+import sys
+
+import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+
+# Check GTK Version, minimum required is 3.10
+if Gtk.check_version(3, 10, 0):
+    print("Gtk version too old, version 3.10 required.")
+    sys.exit(1)
+
+# Get project root directory (enable symlink and trunk execution)
+PROJECT_ROOT_DIRECTORY = os.path.abspath(
+    os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0])))
+)
+
+# Add project root directory to python search path
+sys.path.append(PROJECT_ROOT_DIRECTORY)
+
+# Bind text domain and locale using gettext
+LOCAL_LOCALE_DIR = os.path.join(PROJECT_ROOT_DIRECTORY, "mo")
+os.environ["TEXTDOMAINDIR"] = LOCAL_LOCALE_DIR
+os.environ["TEXTDOMAIN"] = "Menuet"
+locale.setlocale(locale.LC_ALL, "")
+gettext.bindtextdomain("Menuet", LOCAL_LOCALE_DIR)
+gettext.textdomain("Menuet")
+gettext.install("Menuet", LOCAL_LOCALE_DIR)
+
+# Allow application shutdown with Ctrl-C in terminal
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+share_dir = os.path.normpath(os.path.join(current_dir, "../share"))
+if share_dir not in sys.path:
+    sys.path.insert(0, share_dir)
+import menuet
+
+menuet.main()

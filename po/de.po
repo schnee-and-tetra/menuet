@@ -2,1036 +2,1486 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# Sean Davis <sean@bluesabre.org>, 2020
-# Vinzenz Vietzke <vinz@vinzv.de>, 2020
-# Noneatme <jonas.barascu@posteo.de>, 2021
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-24 23:18-0400\n"
-"PO-Revision-Date: 2020-06-10 02:27+0000\n"
-"Last-Translator: Noneatme <jonas.barascu@posteo.de>, 2021\n"
-"Language-Team: German (https://www.transifex.com/bluesabreorg/teams/99550/de/)\n"
+"POT-Creation-Date: 2026-09-18 09:50+0900\n"
+"PO-Revision-Date: 2026-09-18 09:52+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
 
-#: ../menulibre.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Menübearbeitung"
-
-#: ../menulibre.desktop.in.h:2
-msgid "Add or remove applications from the menu"
-msgstr "Anwendungen aus bzw. zu diesem Menü hinzufügen oder entfernen"
-
-#. Translators: This option adds a new application entry to the menu.
-#: ../data/ui/MenulibreWindow.ui.h:2
-msgid "Add _Launcher"
-msgstr "_Starter hinzufügen"
-
-#. Translators: This option adds a new directory entry to the menu.
-#: ../data/ui/MenulibreWindow.ui.h:4
-msgid "Add _Directory"
-msgstr "_Verzeichnis hinzufügen"
-
-#. Translators: This option adds a new separator entry to the menu.
-#: ../data/ui/MenulibreWindow.ui.h:6
-msgid "Add _Separator"
-msgstr "_Trennlinie hinzufügen"
-
-#. Translators: Icon popup menu item to browse available icons.
-#: ../data/ui/MenulibreWindow.ui.h:8
-msgid "Browse Icons…"
-msgstr "Symbole durchsuchen …"
-
-#. Translators: Icon popup menu item to browse files for an icon file.
-#: ../data/ui/MenulibreWindow.ui.h:10
-msgid "Browse Files…"
-msgstr "Dateien durchsuchen …"
-
-#. Translators: Toolbar button to save the currently selected item.
-#: ../data/ui/MenulibreWindow.ui.h:12
-msgid "Save Launcher"
-msgstr "Starter speichern"
-
-#. Translators: Toolbar button to undo last change to currently selected item.
-#. Translators: Undo action tooltip
-#: ../data/ui/MenulibreWindow.ui.h:14 ../menulibre/MenulibreApplication.py:428
-msgid "Undo"
-msgstr "Rückgängig machen"
-
-#. Translators: Toolbar button to redo the last undone change to currently
-#. selected item.
-#. Translators: Redo action tooltip
-#: ../data/ui/MenulibreWindow.ui.h:16 ../menulibre/MenulibreApplication.py:437
-msgid "Redo"
-msgstr "Wiederholen"
-
-#. Translators: Toolbar button to revery the currently selected item to it
-#. Translators: Revert action tooltip
-#: ../data/ui/MenulibreWindow.ui.h:18 ../menulibre/MenulibreApplication.py:446
-msgid "Revert"
-msgstr "Zurücksetzen"
-
-#. Translators: Toolbar button to test the currently selected item.
-#: ../data/ui/MenulibreWindow.ui.h:20
-msgid "Test Launcher"
-msgstr "Starter testen"
-
-#. Translators: Toolbar button to delete the currently selected item.
-#. Translators: Delete action tooltip
-#: ../data/ui/MenulibreWindow.ui.h:22 ../menulibre/MenulibreApplication.py:464
-msgid "Delete"
-msgstr "Löschen"
-
-#. Translators: Save On Close Dialog, do save, then close.
-#. Translators: Save On Leave Dialog, do save, then leave.
-#. Translators: Save Launcher action tooltip
-#: ../data/ui/MenulibreWindow.ui.h:23 ../menulibre/Dialogs.py:103
-#: ../menulibre/Dialogs.py:132 ../menulibre/MenulibreApplication.py:419
-msgid "Save"
-msgstr "Speichern"
-
-#. Translators: Placeholder text for the search text entry.
-#: ../data/ui/MenulibreWindow.ui.h:25
-msgid "Search"
-msgstr "Suchen"
-
-#. Translators: This error is displayed in a notice at the top of the
-#. application when one or more desktop files fails processing.
-#: ../data/ui/MenulibreWindow.ui.h:27
-msgid "Invalid desktop files detected! Please see details."
-msgstr "Ungültige Schreibtischdatei erkannt! Bitte Details ansehen."
-
-#. Translators: Treeview toolbar button to move the currently selected item
-#. up.
-#: ../data/ui/MenulibreWindow.ui.h:29
-msgid "Move Up"
-msgstr "Nach oben"
-
-#. Translators: Treeview toolbar button to move the currently selected item
-#. down.
-#: ../data/ui/MenulibreWindow.ui.h:31
-msgid "Move Down"
-msgstr "Nach unten"
-
-#. Translators: Treeview toolbar button to sort the currently open submenu
-#. alphabetically.
-#: ../data/ui/MenulibreWindow.ui.h:33
-msgid "Sort Alphabetically"
-msgstr "Alphabetisch sortieren"
-
-#. Translators: Placeholder text/hint for the application name entry.
-#: ../data/ui/MenulibreWindow.ui.h:35
-msgid "Application Name"
-msgstr "Name der Anwendung"
-
-#. Translators: Placeholder text/hint for the application comment entry.
-#. Translators: "Description" tree column header
-#: ../data/ui/MenulibreWindow.ui.h:37 ../menulibre/MenulibreApplication.py:833
-msgid "Description"
-msgstr "Beschreibung"
-
-#. Translators: Tooltip for the "Exec" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:39
-msgid ""
-"Program to execute with arguments. This key is required if DBusActivatable is not set to \"True\" or if you need compatibility with implementations that do not understand D-Bus activation.\n"
-"See https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#exec for a list of supported arguments."
-msgstr ""
-"Programm zur Ausführung mit Argumenten. Dieser Schlüssel ist erforderlich, wenn DBusActivatable nicht auf \"True\" gesetzt ist oder wenn Sie Kompatibilität mit Implementierungen benötigen, die D-Bus-Aktivierung nicht verstehen.\n"
-"Siehe https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#exec für eine Liste der unterstützten Argumente."
-
-#. Translators: Treeview column for an action item
-#: ../data/ui/MenulibreWindow.ui.h:42
-msgid "Command"
-msgstr "Befehl"
-
-#. Translators: Tooltip for the "Path" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:44
-msgid "The working directory."
-msgstr "Das Arbeitsverzeichnis."
-
-#. Translators: "Path" text entry. The working directory of the application.
-#: ../data/ui/MenulibreWindow.ui.h:46
-msgid "Working Directory"
-msgstr "Arbeitsverzeichnis"
-
-#. Translators: Header for the commonly used application fields.
-#: ../data/ui/MenulibreWindow.ui.h:48
-msgid "Application Details"
-msgstr "Anwendungsdetails"
-
-#. Translators: Tooltip for the "Terminal" on/off switch.
-#: ../data/ui/MenulibreWindow.ui.h:50
-msgid "If set to \"True\", the program will be ran in a terminal window."
-msgstr ""
-"Wenn auf »AN« gestellt, wird das Programm in einem Terminal-Fenster "
-"gestartet."
-
-#. Translators: "Terminal" on/off switch. When enabled, the application is
-#. executed in a terminal window.
-#: ../data/ui/MenulibreWindow.ui.h:52
-msgid "Run in terminal"
-msgstr "Im Terminal ausführen"
-
-#. Translators: Tooltip for the "StartupNotify" on/off switch.
-#: ../data/ui/MenulibreWindow.ui.h:54
-msgid ""
-"If set to \"True\", a startup notification is sent. Usually means that a "
-"busy cursor is shown while the application launches."
-msgstr ""
-"Wenn auf »AN« gestellt, wird eine Startbenachrichtigung gesendet. Das "
-"bedeutet üblicherweise, dass der Mauszeiger als »beschäftigt« angezeigt "
-"wird, während das Programm startet."
-
-#. Translators: "StartupNotify" on/off switch. When enabled, a busy cursor is
-#. shown while the application launches.
-#: ../data/ui/MenulibreWindow.ui.h:56
-msgid "Use startup notification"
-msgstr "Startbenachrichtigung benutzen"
-
-#. Translators: Tooltip for the "NoDisplay" on/off switch.
-#: ../data/ui/MenulibreWindow.ui.h:58
-msgid ""
-"If set to \"True\", this entry will not be shown in menus, but will be "
-"available for MIME type associations etc."
-msgstr ""
-"Wenn auf »AN« gestellt, wird dieser Eintrag in den Menüs nicht angezeigt. Er"
-" wird aber für Dateitypenverknüpfungen (MIME-Typen) usw. zur Verfügung "
-"stehen."
-
-#. Translators: "NoDisplay" on/off switch. When enabled, the application will
-#. not be shown in menus, but will be available for MIME type associations
-#. etc.
-#: ../data/ui/MenulibreWindow.ui.h:60
-msgid "Hide from menus"
-msgstr "Im Menü verstecken"
-
-#. Translators: Header for the less common application and directory fields.
-#: ../data/ui/MenulibreWindow.ui.h:62
-msgid "Options"
-msgstr "Einstellungen"
-
-#. Translators: Button to add item to list.
-#: ../data/ui/MenulibreWindow.ui.h:64
-msgid "Add"
-msgstr "Hinzufügen"
-
-#. Translators: Button to remove item from list.
-#: ../data/ui/MenulibreWindow.ui.h:66
-msgid "Remove"
-msgstr "Entfernen"
-
-#. Translators: Button to remove all items from list.
-#: ../data/ui/MenulibreWindow.ui.h:68
-msgid "Clear"
-msgstr "Leeren"
-
-#. Translators: Treeview column for whether an action item is displayed
-#. (boolean).
-#: ../data/ui/MenulibreWindow.ui.h:70
+#: menuet/ActionEditor.py:53
 msgid "Show"
 msgstr "Anzeigen"
 
-#. Translators: Treeview column for the name of the displayed action item.
-#: ../data/ui/MenulibreWindow.ui.h:72
+#: menuet/ActionEditor.py:61
 msgid "Name"
 msgstr "Name"
 
-#. Translators: Window title for the Select Icon dialog
-#: ../data/ui/MenulibreWindow.ui.h:74
-msgid "Select an icon…"
-msgstr "Symbol auswählen …"
+#: menuet/ActionEditor.py:69 menuet/ApplicationEditor.py:95
+#: menuet/CommandEditor.py:596 menuet/CommandEditor.py:608
+msgid "Command"
+msgstr "Befehl"
 
-#. Translators: Button to cancel and leave a dialog.
-#. Translators: Help Dialog, cancel button.
-#. Translators: Save On Close Dialog, don't save, cancel close.
-#. Translators: Save On Leave Dialog, don't save, cancel leave.
-#. Translators: Revert Dialog, cancel button.
-#. Translators: File Chooser Dialog, cancel button.
-#: ../data/ui/MenulibreWindow.ui.h:76 ../menulibre/Dialogs.py:66
-#: ../menulibre/Dialogs.py:101 ../menulibre/Dialogs.py:130
-#: ../menulibre/Dialogs.py:169 ../menulibre/Dialogs.py:189
-#: ../menulibre/MenulibreIconSelection.py:81
-msgid "Cancel"
-msgstr "Abbrechen"
+#: menuet/ActionEditor.py:77 menuet/CategoryEditor.py:601
+#: menuet/CommandEditor.py:414
+msgid "Add"
+msgstr "Hinzufügen"
 
-#. Translators: Button to accept and apply changes in a dialog.
-#: ../data/ui/MenulibreWindow.ui.h:78
-msgid "Apply"
-msgstr "Anwenden"
+#: menuet/ActionEditor.py:81 menuet/CategoryEditor.py:605
+msgid "Remove"
+msgstr "Entfernen"
 
-#. Translators: Window title for the parsing error log dialog.
-#: ../data/ui/MenulibreWindow.ui.h:80
-msgid "Parsing Errors"
-msgstr "Analysierungsfehler"
+#: menuet/ActionEditor.py:85 menuet/CategoryEditor.py:609
+#: menuet/CommandEditor.py:153
+msgid "Clear"
+msgstr "Leeren"
 
-#. Translators: This text is displayed in the Parsing Errors dialog and
-#. provides a basic summary of the errors reported.
-#: ../data/ui/MenulibreWindow.ui.h:82
-msgid ""
-"The following desktop files have failed parsing by the underlying library, and will therefore not show up in MenuLibre.\n"
-"Please investigate these problems with the associated package maintainer."
-msgstr ""
-"Die folgenden Desktop-Dateien haben das Parsen durch die zugrunde liegende Bibliothek nicht bestanden und werden daher nicht in MenuLibre angezeigt.\n"
-"Bitte untersuchen Sie diese Probleme mit dem zuständigen Paketbetreuer."
+#: menuet/ActionEditor.py:89 menuet/MenuetTreeview.py:121
+#: menuet/MenuetTreeview.py:122
+msgid "Move Up"
+msgstr "Nach oben"
 
-#. Translators: Tooltip for the "GenericName" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:85
-msgid "Generic name of the application, for example \"Web Browser\"."
-msgstr "Allgemeiner Name der Anwendung, z.B. »Internetbrowser«."
+#: menuet/ActionEditor.py:93 menuet/MenuetTreeview.py:127
+#: menuet/MenuetTreeview.py:128
+msgid "Move Down"
+msgstr "Nach unten"
 
-#. Translators: "GenericName" text entry. Generic name of the application, for
-#. example "Web Browser".
-#: ../data/ui/MenulibreWindow.ui.h:87
+#: menuet/ActionEditor.py:276
+msgid "New Shortcut"
+msgstr "Neue Verknüpfung"
+
+#: menuet/AdvancedPage.py:52
 msgid "Generic Name"
-msgstr "Allgemeiner Name"
+msgstr "Generischer Name"
 
-#. Translators: Tooltip for the "NotShowIn" text entry. Possible values
-#. "Budgie", "Cinnamon", "EDE", "GNOME", "KDE", "LXDE", "LXQt", "MATE",
-#. "Pantheon", "Razor", "ROX", "TDE", "Unity", "XFCE", and "Old" should not be
-#. translated.
-#: ../data/ui/MenulibreWindow.ui.h:89
-msgid ""
-"A list of environments that should not display this entry. You can only use this key if \"OnlyShowIn\" is not set.\n"
-"Possible values include: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
-msgstr ""
-"Eine Liste von Arbeitsumgebungen, die diesen Eintrag nicht anzeigen sollen. Diese Option kann nur verwendet werden, wenn »Nur anzeigen in« nicht verwendet wird.\n"
-"Mögliche Werte sind: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
+#: menuet/AdvancedPage.py:53
+msgid "Generic name of the application, for example \"Web Browser\"."
+msgstr "Generischer Name der Anwendung, zum Beispiel „Webbrowser“."
 
-#. Translators: "NotShowIn" text entry. A list of environments that should not
-#. display this entry.
-#: ../data/ui/MenulibreWindow.ui.h:92
-msgid "Not Shown In"
-msgstr "Nicht anzeigen in"
+#: menuet/AdvancedPage.py:59
+msgid "Try Exec"
+msgstr "Try Exec"
 
-#. Translators: Tooltip for the "OnlyShowIn" text entry. Possible values
-#. "Budgie", "Cinnamon", "EDE", "GNOME", "KDE", "LXDE", "LXQt", "MATE",
-#. "Pantheon", "Razor", "ROX", "TDE", "Unity", "XFCE", and "Old" should not be
-#. translated.
-#: ../data/ui/MenulibreWindow.ui.h:94
-msgid ""
-"A list of environments that should display this entry. Other environments will not display this entry. You can only use this key if \"NotShowIn\" is not set.\n"
-"Possible values include: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
-msgstr ""
-"Eine Liste von Arbeitsumgebungen, die diesen Eintrag anzeigen sollen. Diese Option kann nur verwendet werden, wenn »Nicht anzeigen in« nicht verwendet wird.\n"
-"Mögliche Werte sind: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
-
-#. Translators: "OnlyShowIn" text entry. A list of environments that should
-#. display this entry.
-#: ../data/ui/MenulibreWindow.ui.h:97
-msgid "Only Shown In"
-msgstr "Nur anzeigen in"
-
-#. Translators: Tooltip for the "TryExec" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:99
+#: menuet/AdvancedPage.py:61
 msgid ""
 "Path to an executable file to determine if the program is installed. If the "
 "file is not present or is not executable, this entry may not be shown in a "
 "menu."
 msgstr ""
-"Pfad zur ausführbaren Datei, um festzustellen, ob das Programm installiert "
-"ist. Wenn die Datei nicht vorhanden ist oder nicht ausführbar ist, wird "
-"dieser Eintrag im Menü nicht angezeigt."
+"Pfad zu einer ausführbaren Datei, um festzustellen, ob das Programm "
+"installiert ist. Wenn die Datei nicht vorhanden oder nicht ausführbar ist, "
+"wird dieser Eintrag möglicherweise nicht im Menü angezeigt."
 
-#. Translators: "TryExec" text entry. Path to an executable file to determine
-#. if the program is installed.
-#: ../data/ui/MenulibreWindow.ui.h:101
-msgid "Try Exec"
-msgstr "Abfragebefehl"
+#: menuet/AdvancedPage.py:68
+msgid "Only Show In"
+msgstr "Nur anzeigen in"
 
-#. Translators: Tooltip for the "Mimetypes" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:103
-msgid "The MIME type(s) supported by this application."
+#: menuet/AdvancedPage.py:70
+msgid ""
+"A list of environments that should display this entry. Other environments "
+"will not display this entry. You can only use this key if \"NotShowIn\" is "
+"not set.\n"
+"Possible values include: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, "
+"MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
 msgstr ""
-"Die Dateitypen (MIME-Typen), die von dieser Anwendung unterstützt werden."
+"Eine Liste von Umgebungen, die diesen Eintrag anzeigen sollen. Andere "
+"Umgebungen zeigen diesen Eintrag nicht an. Sie können diesen Schlüssel nur "
+"verwenden, wenn „NotShowIn“ nicht gesetzt ist.\n"
+"Mögliche Werte umfassen: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, "
+"MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
 
-#. Translators: "Mimetype" text entry. The MIME type(s) supported by this
-#. application.
-#: ../data/ui/MenulibreWindow.ui.h:105
+#: menuet/AdvancedPage.py:78
+msgid "Not Shown In"
+msgstr "Nicht anzeigen in"
+
+#: menuet/AdvancedPage.py:80
+msgid ""
+"A list of environments that should not display this entry. You can only use "
+"this key if \"OnlyShowIn\" is not set.\n"
+"Possible values include: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, "
+"MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
+msgstr ""
+"Eine Liste von Umgebungen, die diesen Eintrag nicht anzeigen sollen. Sie "
+"können diesen Schlüssel nur verwenden, wenn „OnlyShowIn“ nicht gesetzt ist.\n"
+"Mögliche Werte umfassen: Budgie, Cinnamon, EDE, GNOME, KDE, LXDE, LXQt, "
+"MATE, Pantheon, Razor, ROX, TDE, Unity, XFCE, Old"
+
+#: menuet/AdvancedPage.py:88
 msgid "Mimetypes"
 msgstr "MIME-Typen"
 
-#. Translators: Tooltip for the "Keywords" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:107
+#: menuet/AdvancedPage.py:89
+msgid "The MIME type(s) supported by this application."
+msgstr "Die von dieser Anwendung unterstützten MIME-Typen."
+
+#: menuet/AdvancedPage.py:95
+msgid "Keywords"
+msgstr "Schlüsselwörter"
+
+#: menuet/AdvancedPage.py:97
 msgid ""
 "A list of keywords to describe this entry. You can use these to help "
 "searching entries. These are not meant for display, and should not be "
 "redundant with the values of Name or GenericName."
 msgstr ""
-"Eine Liste von Schlagwörtern, um diesen Eintrag zu beschreiben. Sie können "
-"diese benutzen, um Einträge besser zu finden. Diese sind nicht zur Anzeige "
-"gedacht und sollten nicht die Werte aus »Name« und »Allgemeiner Name« "
-"enthalten."
+"Eine Liste von Schlüsselwörtern zur Beschreibung dieses Eintrags. Diese "
+"helfen beim Suchen von Einträgen. Sie sind nicht zur Anzeige gedacht und "
+"sollten nicht redundant zu den Werten von Name oder GenericName sein."
 
-#. Translators: "Keywords" text entry. A list of keywords to describe this
-#. entry.
-#: ../data/ui/MenulibreWindow.ui.h:109
-msgid "Keywords"
-msgstr "Schlagwörter"
+#: menuet/AdvancedPage.py:104
+msgid "Startup WM Class"
+msgstr "Start-WM-Klasse"
 
-#. Translators: Tooltip for the "StartupWMClass" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:111
+#: menuet/AdvancedPage.py:106
 msgid ""
 "If specified, the application will be requested to use the string as a WM "
 "class or a WM name hint at least in one window."
 msgstr ""
-"Wenn angegeben, wird diese Anwendung aufgefordert, die Zeichenkette als "
-"Fensterverwaltungsklasse oder -namenshinweis, in wenigstens einem Fenster zu"
-" benutzen."
+"Falls angegeben, wird die Anwendung aufgefordert, diese Zeichenkette als WM-"
+"Klasse oder WM-Namenshinweis in mindestens einem Fenster zu verwenden."
 
-#. Translators: "StartupWMClass" text entry. A window manager hint for the
-#. application
-#: ../data/ui/MenulibreWindow.ui.h:113
-msgid "Startup WM Class"
-msgstr "Start-WM-Klasse"
+#: menuet/AdvancedPage.py:113
+msgid "Implements"
+msgstr "Implementiert"
 
-#. Translators: Identify Window Dialog, primary text.
-#: ../data/ui/MenulibreWindow.ui.h:114 ../menulibre/Dialogs.py:251
-msgid "Identify Window"
-msgstr "Fenster identifizieren"
+#: menuet/AdvancedPage.py:114
+msgid "A list of interfaces that this application implements."
+msgstr "Eine Liste von Schnittstellen, die diese Anwendung implementiert."
 
-#. Translators: Tooltip for the "Hidden" on/off switch.
-#: ../data/ui/MenulibreWindow.ui.h:116
+#: menuet/AdvancedPage.py:120
+msgid "Hidden"
+msgstr "Ausgeblendet"
+
+#: menuet/AdvancedPage.py:122
 msgid ""
 "If set to \"True\", the result for the user is equivalent to the .desktop "
 "file not existing at all."
 msgstr ""
-"Wenn auf »AN« gestellt, ist das Ergebnis, für den Benutzer, entsprechend zur"
-" .desktop-Datei, die nicht vorhanden ist."
+"Wenn auf „True“ gesetzt, ist das Ergebnis für den Benutzer so, als ob "
+"die .desktop-Datei überhaupt nicht existieren würde."
 
-#. Translators: "Hidden" on/off switch. When enabled, the application is
-#. hidden from the menu.
-#: ../data/ui/MenulibreWindow.ui.h:118
-msgid "Hidden"
-msgstr "Versteckt"
-
-#. Translators: Tooltip for the "DBusActivatable" on/off switch.
-#: ../data/ui/MenulibreWindow.ui.h:120
-msgid ""
-"Set this key to \"True\" if D-Bus activation is supported for this application and you want to use it.\n"
-"See https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#dbusactivatable for more information."
-msgstr ""
-"Setzen Sie diesen Wert auf \"True\", wenn die D-Bus-Aktivierung für diese Anwendung unterstützt wird und Sie sie verwenden möchten.\n"
-"Siehe https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#dbusactivatable für weitere Informationen."
-
-#. Translators: "DBusActivatable" on/off switch. When enabled, the application
-#. is said to be activated via DBUS.
-#: ../data/ui/MenulibreWindow.ui.h:123
+#: menuet/AdvancedPage.py:129
 msgid "DBUS Activatable"
-msgstr "DBus-Aktivierbar"
+msgstr "D-Bus-aktivierbar"
 
-#. Translators: Tooltip for the "Implements" text entry.
-#: ../data/ui/MenulibreWindow.ui.h:125
-msgid "A list of interfaces that this application implements."
-msgstr "Eine Liste von Schnittstellen, die diese Anwendung enthält."
-
-#. Translators: "Implements" text entry. A list of interfaces that this
-#. application implements.
-#: ../data/ui/MenulibreWindow.ui.h:127
-msgid "Implements"
-msgstr "Enthält"
-
-#: ../data/ui/MenulibreWindow.ui.h:128
-msgctxt ""
-"If true, the application prefers to be run on a more powerful GPU (graphics "
-"processing unit, graphics card) if available."
+#: menuet/AdvancedPage.py:131
 msgid ""
-"Set this key to \"True\" if this application prefers to be run on a more powerful GPU if available.\n"
-"See https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#prefersnondefaultgpu for more information."
+"Set this key to \"True\" if D-Bus activation is supported for this "
+"application and you want to use it."
 msgstr ""
-"Setzen Sie diesen Wert auf \"True\", wenn diese Anwendung auf einer leistungsstärkeren GPU (falls verfügbar) ausgeführt werden soll.\n"
-"Siehe https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#prefersnondefaultgpu für weitere Informationen."
+"Setzen Sie diesen Schlüssel auf „True“, wenn die D-Bus-Aktivierung für diese "
+"Anwendung unterstützt wird und Sie sie verwenden möchten."
 
-#: ../data/ui/MenulibreWindow.ui.h:130
-msgctxt ""
-"If true, the application prefers to be run on a more powerful GPU (graphics "
-"processing unit, graphics card) if available."
+#: menuet/AdvancedPage.py:138
 msgid "Prefers Non-Default GPU"
-msgstr "Bevorzugt Nicht-Standard-GPU"
+msgstr "Bevorzugt nicht-standardmäßige GPU"
 
-#: ../data/ui/MenulibreWindow.ui.h:131
+#: menuet/AdvancedPage.py:140
 msgid ""
-"Set this key to \"True\" if this application uses notifications.\n"
-"See https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#x-gnome-usesnotifications for more information."
+"Set this key to \"True\" if this application prefers to be run on a more "
+"powerful GPU if available."
 msgstr ""
-"Setzen Sie diesen Wert auf \"True\", wenn diese Anwendung Benachrichtigungen verwendet.\n"
-"Siehe https://github.com/bluesabre/menulibre/wiki/Recognized-Desktop-Entry-Keys#x-gnome-usesnotifications for more information."
+"Setzen Sie diesen Schlüssel auf „True“, wenn diese Anwendung bevorzugt auf "
+"einer leistungsstärkeren GPU ausgeführt werden möchte, sofern verfügbar."
 
-#: ../data/ui/MenulibreWindow.ui.h:133
-msgid "Uses Notifications"
-msgstr "Verwendet Benachrichtigungen"
+#: menuet/ApplicationEditor.py:72
+msgid "Add name"
+msgstr "Name hinzufügen"
 
-#. Translators: Command line option to display debug messages on stdout
-#: ../menulibre/__init__.py:34
-msgid "Show debug messages"
-msgstr "Diagnosemeldungen anzeigen"
+#: menuet/ApplicationEditor.py:78
+msgid "Add comment"
+msgstr "Kommentar hinzufügen"
 
-#. Translators: Command line option to switch layout
-#: ../menulibre/__init__.py:38
-msgid "Use headerbar layout (client side decorations)"
-msgstr "Kopfzeilen-Layout verwenden (clientseitige Dekorationen)"
+#: menuet/ApplicationEditor.py:84
+msgid "Application Details"
+msgstr "Anwendungsdetails"
 
-#. Translators: Command line option to switch layout
-#: ../menulibre/__init__.py:43
-msgid "Use toolbar layout (server side decorations)"
-msgstr "Symbolleisten-Layout verwenden (serverseitige Dekorationen)"
-
-#. Translators: About Dialog, window title.
-#: ../menulibre/Dialogs.py:38
-msgid "About MenuLibre"
-msgstr "Über MenuLibre"
-
-#. Translators: Help Dialog, window title.
-#: ../menulibre/Dialogs.py:58
-msgid "Online Documentation"
-msgstr "Internetdokumentation"
-
-#. Translators: Help Dialog, primary text.
-#: ../menulibre/Dialogs.py:60
-msgid "Do you want to read the MenuLibre manual online?"
-msgstr "Wollen Sie die Bedienungsanleitung von MenuLibre im Internet lesen?"
-
-#. Translators: Help Dialog, secondary text.
-#: ../menulibre/Dialogs.py:62
+#: menuet/ApplicationEditor.py:98
 msgid ""
-"You will be redirected to the documentation website where the help pages are"
-" maintained."
+"Program to execute with arguments. This key is required if DBusActivatable "
+"is not set to \"True\" or if you need compatibility with implementations "
+"that do not understand D-Bus activation."
 msgstr ""
-"Sie werden auf die Dokumentationsseite weitergeleitet, wo die Hilfeseiten "
-"verwaltet werden."
+"Auszuführendes Programm mit Argumenten. Dieser Schlüssel ist erforderlich, "
+"wenn DBusActivatable nicht auf „True“ gesetzt ist oder wenn Sie "
+"Kompatibilität mit Implementierungen benötigen, die keine D-Bus-Aktivierung "
+"verstehen."
 
-#. Translators: Help Dialog, confirmation button. Navigates to
-#. online documentation.
-#: ../menulibre/Dialogs.py:69
-msgid "Read Online"
-msgstr "Im Internet lesen"
+#: menuet/ApplicationEditor.py:100
+msgid "Supported Arguments"
+msgstr "Unterstützte Argumente"
 
-#. Translators: Save On Close Dialog, window title.
-#. Translators: Save On Leave Dialog, window title.
-#: ../menulibre/Dialogs.py:91 ../menulibre/Dialogs.py:119
+#: menuet/ApplicationEditor.py:109
+msgid "Working Directory"
+msgstr "Arbeitsverzeichnis"
+
+#: menuet/ApplicationEditor.py:109
+msgid "The working directory."
+msgstr "Das Arbeitsverzeichnis."
+
+#: menuet/ApplicationEditor.py:118
+msgid "Options"
+msgstr "Optionen"
+
+#: menuet/ApplicationEditor.py:127
+msgid "Run in terminal"
+msgstr "Im Terminal ausführen"
+
+#: menuet/ApplicationEditor.py:129
+msgid "If set to \"True\", the program will be ran in a terminal window."
+msgstr ""
+"Wenn auf „True“ gesetzt, wird das Programm in einem Terminalfenster "
+"ausgeführt."
+
+#: menuet/ApplicationEditor.py:142
+msgid "Use startup notification"
+msgstr "Startbenachrichtigung verwenden"
+
+#: menuet/ApplicationEditor.py:145
+msgid ""
+"If set to \"True\", a startup notification is sent. Usually means that a "
+"busy cursor is shown while the application launches."
+msgstr ""
+"Wenn auf „True“ gesetzt, wird eine Startbenachrichtigung gesendet. Das "
+"bedeutet normalerweise, dass beim Start der Anwendung ein beschäftigter "
+"Mauszeiger angezeigt wird."
+
+#: menuet/ApplicationEditor.py:159
+msgid "Hide from menus"
+msgstr "Aus Menüs ausblenden"
+
+#: menuet/ApplicationEditor.py:162
+msgid ""
+"If set to \"True\", this entry will not be shown in menus, but will be "
+"available for MIME type associations etc."
+msgstr ""
+"Wenn auf „True“ gesetzt, wird dieser Eintrag nicht in Menüs angezeigt, ist "
+"aber für MIME-Typ-Zuordnungen usw. verfügbar."
+
+#: menuet/ApplicationEditor.py:187
+msgid "Categories"
+msgstr "Kategorien"
+
+#: menuet/ApplicationEditor.py:198
+msgid "Actions"
+msgstr "Aktionen"
+
+#: menuet/ApplicationEditor.py:209
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: menuet/CategoryEditor.py:202
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: menuet/CategoryEditor.py:204
+msgid "Development"
+msgstr "Entwicklung"
+
+#: menuet/CategoryEditor.py:206
+msgid "Education"
+msgstr "Bildung"
+
+#: menuet/CategoryEditor.py:208
+msgid "Games"
+msgstr "Spiele"
+
+#: menuet/CategoryEditor.py:210
+msgid "Graphics"
+msgstr "Grafik"
+
+#: menuet/CategoryEditor.py:212
+msgid "Internet"
+msgstr "Internet"
+
+#: menuet/CategoryEditor.py:214
+msgid "Office"
+msgstr "Büro"
+
+#: menuet/CategoryEditor.py:216
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: menuet/CategoryEditor.py:218
+msgid "System"
+msgstr "System"
+
+#: menuet/CategoryEditor.py:220
+msgid "Accessories"
+msgstr "Zubehör"
+
+#: menuet/CategoryEditor.py:222
+msgid "WINE"
+msgstr "WINE"
+
+#: menuet/CategoryEditor.py:224 menuet/CategoryEditor.py:512
+msgid "Other"
+msgstr "Andere"
+
+#: menuet/CategoryEditor.py:226
+msgid "Accessibility"
+msgstr "Barrierefreiheit"
+
+#: menuet/CategoryEditor.py:228
+msgid "Archiving"
+msgstr "Archivierung"
+
+#: menuet/CategoryEditor.py:230
+msgid "Calculator"
+msgstr "Rechner"
+
+#: menuet/CategoryEditor.py:232
+msgid "Clock"
+msgstr "Uhr"
+
+#: menuet/CategoryEditor.py:234
+msgid "Compression"
+msgstr "Kompression"
+
+#: menuet/CategoryEditor.py:236
+msgid "File Tools"
+msgstr "Dateidienstprogramme"
+
+#: menuet/CategoryEditor.py:238
+msgid "Text Editor"
+msgstr "Texteditor"
+
+#: menuet/CategoryEditor.py:240
+msgid "Text Tools"
+msgstr "Textwerkzeuge"
+
+#: menuet/CategoryEditor.py:242
+msgid "Building"
+msgstr "Erstellung"
+
+#: menuet/CategoryEditor.py:244
+msgid "Debugger"
+msgstr "Debugger"
+
+#: menuet/CategoryEditor.py:246
+msgid "IDE"
+msgstr "IDE"
+
+#: menuet/CategoryEditor.py:248
+msgid "GUI Designer"
+msgstr "GUI-Designer"
+
+#: menuet/CategoryEditor.py:250
+msgid "Profiling"
+msgstr "Profilierung"
+
+#: menuet/CategoryEditor.py:252
+msgid "Revision Control"
+msgstr "Versionsverwaltung"
+
+#: menuet/CategoryEditor.py:254
+msgid "Translation"
+msgstr "Übersetzung"
+
+#: menuet/CategoryEditor.py:256
+msgid "Web Development"
+msgstr "Webentwicklung"
+
+#: menuet/CategoryEditor.py:258
+msgid "Art"
+msgstr "Kunst"
+
+#: menuet/CategoryEditor.py:260
+msgid "Artificial Intelligence"
+msgstr "Künstliche Intelligenz"
+
+#: menuet/CategoryEditor.py:262
+msgid "Astronomy"
+msgstr "Astronomie"
+
+#: menuet/CategoryEditor.py:264
+msgid "Biology"
+msgstr "Biologie"
+
+#: menuet/CategoryEditor.py:266
+msgid "Chemistry"
+msgstr "Chemie"
+
+#: menuet/CategoryEditor.py:268
+msgid "Computer Science"
+msgstr "Informatik"
+
+#: menuet/CategoryEditor.py:270
+msgid "Construction"
+msgstr "Konstruktion"
+
+#: menuet/CategoryEditor.py:272
+msgid "Data Visualization"
+msgstr "Datenvisualisierung"
+
+#: menuet/CategoryEditor.py:274
+msgid "Economy"
+msgstr "Wirtschaft"
+
+#: menuet/CategoryEditor.py:276
+msgid "Electricity"
+msgstr "Elektrizität"
+
+#: menuet/CategoryEditor.py:278
+msgid "Geography"
+msgstr "Geografie"
+
+#: menuet/CategoryEditor.py:280
+msgid "Geology"
+msgstr "Geologie"
+
+#: menuet/CategoryEditor.py:282
+msgid "Geoscience"
+msgstr "Geowissenschaften"
+
+#: menuet/CategoryEditor.py:284
+msgid "History"
+msgstr "Geschichte"
+
+#: menuet/CategoryEditor.py:286
+msgid "Humanities"
+msgstr "Geisteswissenschaften"
+
+#: menuet/CategoryEditor.py:288
+msgid "Image Processing"
+msgstr "Bildverarbeitung"
+
+#: menuet/CategoryEditor.py:290
+msgid "Languages"
+msgstr "Sprachen"
+
+#: menuet/CategoryEditor.py:292
+msgid "Literature"
+msgstr "Literatur"
+
+#: menuet/CategoryEditor.py:294
+msgid "Maps"
+msgstr "Karten"
+
+#: menuet/CategoryEditor.py:296
+msgid "Math"
+msgstr "Mathematik"
+
+#: menuet/CategoryEditor.py:298
+msgid "Medical Software"
+msgstr "Medizinische Software"
+
+#: menuet/CategoryEditor.py:300
+msgid "Music"
+msgstr "Musik"
+
+#: menuet/CategoryEditor.py:302
+msgid "Numerical Analysis"
+msgstr "Numerische Analysis"
+
+#: menuet/CategoryEditor.py:304
+msgid "Parallel Computing"
+msgstr "Paralleles Rechnen"
+
+#: menuet/CategoryEditor.py:306
+msgid "Physics"
+msgstr "Physik"
+
+#: menuet/CategoryEditor.py:308
+msgid "Robotics"
+msgstr "Robotik"
+
+#: menuet/CategoryEditor.py:310
+msgid "Spirituality"
+msgstr "Spiritualität"
+
+#: menuet/CategoryEditor.py:312
+msgid "Sports"
+msgstr "Sport"
+
+#: menuet/CategoryEditor.py:314
+msgid "Action Game"
+msgstr "Actionspiel"
+
+#: menuet/CategoryEditor.py:316
+msgid "Adventure Game"
+msgstr "Abenteuerspiel"
+
+#: menuet/CategoryEditor.py:318
+msgid "Arcade Game"
+msgstr "Arcade-Spiel"
+
+#: menuet/CategoryEditor.py:320
+msgid "Board Game"
+msgstr "Brettspiel"
+
+#: menuet/CategoryEditor.py:322
+msgid "Blocks Game"
+msgstr "Blockspiel"
+
+#: menuet/CategoryEditor.py:324
+msgid "Card Game"
+msgstr "Kartenspiel"
+
+#: menuet/CategoryEditor.py:326
+msgid "Emulator"
+msgstr "Emulator"
+
+#: menuet/CategoryEditor.py:328
+msgid "Kids Game"
+msgstr "Kinderspiel"
+
+#: menuet/CategoryEditor.py:330
+msgid "Logic Game"
+msgstr "Logikspiel"
+
+#: menuet/CategoryEditor.py:332
+msgid "Role Playing"
+msgstr "Rollenspiel"
+
+#: menuet/CategoryEditor.py:334
+msgid "Shooter"
+msgstr "Shooter"
+
+#: menuet/CategoryEditor.py:336
+msgid "Simulation"
+msgstr "Simulation"
+
+#: menuet/CategoryEditor.py:338
+msgid "Sports Game"
+msgstr "Sportspiel"
+
+#: menuet/CategoryEditor.py:340
+msgid "Strategy Game"
+msgstr "Strategiespiel"
+
+#: menuet/CategoryEditor.py:342
+msgid "2D Graphics"
+msgstr "2D-Grafik"
+
+#: menuet/CategoryEditor.py:344
+msgid "3D Graphics"
+msgstr "3D-Grafik"
+
+#: menuet/CategoryEditor.py:346
+msgid "OCR"
+msgstr "Texterkennung (OCR)"
+
+#: menuet/CategoryEditor.py:348
+msgid "Photography"
+msgstr "Fotografie"
+
+#: menuet/CategoryEditor.py:350
+msgid "Publishing"
+msgstr "Publizieren"
+
+#: menuet/CategoryEditor.py:352
+msgid "Raster Graphics"
+msgstr "Rastergrafik"
+
+#: menuet/CategoryEditor.py:354
+msgid "Scanning"
+msgstr "Scannen"
+
+#: menuet/CategoryEditor.py:356
+msgid "Vector Graphics"
+msgstr "Vektorgrafik"
+
+#: menuet/CategoryEditor.py:358
+msgid "Viewer"
+msgstr "Betrachter"
+
+#: menuet/CategoryEditor.py:360
+msgid "Chat"
+msgstr "Chat"
+
+#: menuet/CategoryEditor.py:362
+msgid "Dialup"
+msgstr "Einwahl"
+
+#: menuet/CategoryEditor.py:364
+msgid "Feed"
+msgstr "Feed"
+
+#: menuet/CategoryEditor.py:366
+msgid "File Transfer"
+msgstr "Dateiübertragung"
+
+#: menuet/CategoryEditor.py:368
+msgid "Ham Radio"
+msgstr "Amateurfunk"
+
+#: menuet/CategoryEditor.py:370
+msgid "Instant Messaging"
+msgstr "Sofortnachrichten"
+
+#: menuet/CategoryEditor.py:372
+msgid "IRC Client"
+msgstr "IRC-Client"
+
+#: menuet/CategoryEditor.py:374
+msgid "Monitor"
+msgstr "Monitor"
+
+#: menuet/CategoryEditor.py:376
+msgid "News"
+msgstr "Nachrichten"
+
+#: menuet/CategoryEditor.py:378
+msgid "P2P"
+msgstr "P2P"
+
+#: menuet/CategoryEditor.py:380
+msgid "Remote Access"
+msgstr "Fernzugriff"
+
+#: menuet/CategoryEditor.py:382
+msgid "Telephony"
+msgstr "Telefonie"
+
+#: menuet/CategoryEditor.py:384
+msgid "Telephony Tools"
+msgstr "Telefonie-Werkzeuge"
+
+#: menuet/CategoryEditor.py:386
+msgid "Web Browser"
+msgstr "Webbrowser"
+
+#: menuet/CategoryEditor.py:388
+msgid "Audio"
+msgstr "Audio"
+
+#: menuet/CategoryEditor.py:390
+msgid "Audio Video Editing"
+msgstr "Audio- und Videobearbeitung"
+
+#: menuet/CategoryEditor.py:392
+msgid "Disc Burning"
+msgstr "Discbrennen"
+
+#: menuet/CategoryEditor.py:394
+msgid "Midi"
+msgstr "MIDI"
+
+#: menuet/CategoryEditor.py:396
+msgid "Mixer"
+msgstr "Mischer"
+
+#: menuet/CategoryEditor.py:398
+msgid "Player"
+msgstr "Wiedergabe"
+
+#: menuet/CategoryEditor.py:400
+msgid "Recorder"
+msgstr "Aufnahme"
+
+#: menuet/CategoryEditor.py:402
+msgid "Sequencer"
+msgstr "Sequencer"
+
+#: menuet/CategoryEditor.py:404
+msgid "Tuner"
+msgstr "Tuner"
+
+#: menuet/CategoryEditor.py:406
+msgid "TV"
+msgstr "Fernsehen"
+
+#: menuet/CategoryEditor.py:408
+msgid "Video"
+msgstr "Video"
+
+#: menuet/CategoryEditor.py:410
+msgid "Calendar"
+msgstr "Kalender"
+
+#: menuet/CategoryEditor.py:412
+msgid "Contact Management"
+msgstr "Kontaktverwaltung"
+
+#: menuet/CategoryEditor.py:414
+msgid "Database"
+msgstr "Datenbank"
+
+#: menuet/CategoryEditor.py:416
+msgid "Dictionary"
+msgstr "Wörterbuch"
+
+#: menuet/CategoryEditor.py:418
+msgid "Chart"
+msgstr "Diagramm"
+
+#: menuet/CategoryEditor.py:420
+msgid "Email"
+msgstr "E-Mail"
+
+#: menuet/CategoryEditor.py:422
+msgid "Finance"
+msgstr "Finanzen"
+
+#: menuet/CategoryEditor.py:424
+msgid "Flow Chart"
+msgstr "Flussdiagramm"
+
+#: menuet/CategoryEditor.py:426
+msgid "PDA"
+msgstr "PDA"
+
+#: menuet/CategoryEditor.py:428
+msgid "Project Management"
+msgstr "Projektmanagement"
+
+#: menuet/CategoryEditor.py:430
+msgid "Presentation"
+msgstr "Präsentation"
+
+#: menuet/CategoryEditor.py:432
+msgid "Spreadsheet"
+msgstr "Tabellenkalkulation"
+
+#: menuet/CategoryEditor.py:434
+msgid "Word Processor"
+msgstr "Textverarbeitung"
+
+#: menuet/CategoryEditor.py:436
+msgid "Desktop Settings"
+msgstr "Desktop-Einstellungen"
+
+#: menuet/CategoryEditor.py:438
+msgid "Hardware Settings"
+msgstr "Hardware-Einstellungen"
+
+#: menuet/CategoryEditor.py:440
+msgid "Package Manager"
+msgstr "Paketverwaltung"
+
+#: menuet/CategoryEditor.py:442
+msgid "Printing"
+msgstr "Drucken"
+
+#: menuet/CategoryEditor.py:444
+msgid "Security"
+msgstr "Sicherheit"
+
+#: menuet/CategoryEditor.py:446
+msgid "File Manager"
+msgstr "Dateimanager"
+
+#: menuet/CategoryEditor.py:448
+msgid "Filesystem"
+msgstr "Dateisystem"
+
+#: menuet/CategoryEditor.py:450
+msgid "Terminal Emulator"
+msgstr "Terminal-Emulator"
+
+#: menuet/CategoryEditor.py:452
+msgid "Network Settings"
+msgstr "Netzwerkeinstellungen"
+
+#: menuet/CategoryEditor.py:454
+msgid "Personal Settings"
+msgstr "Persönliche Einstellungen"
+
+#: menuet/CategoryEditor.py:456
+msgid "Panel Settings"
+msgstr "Leisten-Einstellungen"
+
+#: menuet/CategoryEditor.py:458
+msgid "Settings Dialog"
+msgstr "Einstellungsdialog"
+
+#: menuet/CategoryEditor.py:460
+msgid "System Settings"
+msgstr "Systemeinstellungen"
+
+#: menuet/CategoryEditor.py:462
+msgid "Toplevel"
+msgstr "Oberste Ebene"
+
+#: menuet/CategoryEditor.py:464
+msgid "Utilities"
+msgstr "Dienstprogramme"
+
+#: menuet/CategoryEditor.py:466
+msgid "GNOME"
+msgstr "GNOME"
+
+#: menuet/CategoryEditor.py:468
+msgid "GTK"
+msgstr "GTK"
+
+#: menuet/CategoryEditor.py:470
+msgid "Xfce"
+msgstr "Xfce"
+
+#: menuet/CategoryEditor.py:486
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: menuet/CategoryEditor.py:581
+msgid "Select a category"
+msgstr "Kategorie auswählen"
+
+#: menuet/CategoryEditor.py:587
+msgid "Category Name"
+msgstr "Kategoriename"
+
+#: menuet/CategoryEditor.py:593
+msgid "Section"
+msgstr "Abschnitt"
+
+#: menuet/CommandEditor.py:22
+msgid "Command Editor"
+msgstr "Befehlseditor"
+
+#: menuet/CommandEditor.py:28 menuet/Dialogs.py:70 menuet/Dialogs.py:102
+#: menuet/Dialogs.py:153 menuet/Dialogs.py:285 menuet/IconEntry.py:165
+#: menuet/IconEntry.py:196 menuet/PathEntry.py:77
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: menuet/CommandEditor.py:28 menuet/IconEntry.py:165 menuet/IconEntry.py:196
+msgid "Apply"
+msgstr "Anwenden"
+
+#: menuet/CommandEditor.py:80
+msgid "Help"
+msgstr "Hilfe"
+
+#: menuet/CommandEditor.py:148 menuet/MenuetApplication.py:464
+#: menuet/MenuetApplication.py:600
+msgid "Revert"
+msgstr "Zurücksetzen"
+
+#: menuet/CommandEditor.py:289
+msgid "A single command line may only contain one of %f, %u, %F, or %U"
+msgstr ""
+"Eine einzelne Befehlszeile darf nur eines von %f, %u, %F oder %U enthalten"
+
+#: menuet/CommandEditor.py:294
+#, python-format
+msgid "Field code '%s' can not be used inside a quoted argument"
+msgstr ""
+"Feldcode „%s“ kann nicht innerhalb eines Argument mit Anführungszeichen "
+"verwendet werden"
+
+#: menuet/CommandEditor.py:299
+#, python-format
+msgid "Field code '%s' has been deprecated"
+msgstr "Feldcode '%s' ist veraltet"
+
+#: menuet/CommandEditor.py:314 menuet/CommandEditor.py:353
+msgid "No command found"
+msgstr "Kein Befehl gefunden"
+
+#: menuet/CommandEditor.py:335
+msgid "Environment variables should be preceded by env"
+msgstr "Umgebungsvariablen sollten von 'env' gefolgt bzw. eingeleitet werden"
+
+#: menuet/CommandEditor.py:339
+msgid "Environment variables should precede the command"
+msgstr "Umgebungsvariablen sollten dem Befehl vorangestellt werden"
+
+#: menuet/CommandEditor.py:355
+#, python-format
+msgid "File '%s' not found"
+msgstr "Datei '%s' nicht gefunden"
+
+#: menuet/CommandEditor.py:357
+#, python-format
+msgid "Command '%s' not found"
+msgstr "Befehl '%s' nicht gefunden"
+
+#: menuet/CommandEditor.py:378
+msgid "No environment variable errors"
+msgstr "Keine Fehler bei Umgebungsvariablen"
+
+#: menuet/CommandEditor.py:383
+msgid "No command errors"
+msgstr "Keine Befehlsfehler"
+
+#: menuet/CommandEditor.py:388
+msgid "No invalid field codes"
+msgstr "Keine ungültigen Feldcodes"
+
+#: menuet/CommandEditor.py:432
+msgid "File"
+msgstr "Datei"
+
+#: menuet/CommandEditor.py:433
+msgid "A single file or directory."
+msgstr "Eine einzelne Datei oder ein Verzeichnis."
+
+#: menuet/CommandEditor.py:434
+msgid "A list of files or directories."
+msgstr "Eine Liste von Dateien oder Verzeichnissen."
+
+#: menuet/CommandEditor.py:438
+msgid "URL"
+msgstr "URL"
+
+#: menuet/CommandEditor.py:439
+msgid "A single URL."
+msgstr "Eine einzelne URL."
+
+#: menuet/CommandEditor.py:440
+msgid "A list of URLs."
+msgstr "Eine Liste von URLs."
+
+#: menuet/CommandEditor.py:444
+msgid "Extra"
+msgstr "Erweitert"
+
+#: menuet/CommandEditor.py:446
+msgid "The <tt>Icon</tt> key of this launcher."
+msgstr "Der <tt>Icon</tt>-Schlüssel dieses Starters."
+
+#: menuet/CommandEditor.py:449
+msgid "The translated <tt>Name</tt> key of this launcher."
+msgstr "Der übersetzte <tt>Name</tt>-Schlüssel dieses Starters."
+
+#: menuet/CommandEditor.py:451
+msgid "The file path of this launcher."
+msgstr "Der Dateipfad dieses Starters."
+
+#: menuet/CommandEditor.py:484
+msgid "Environment variable"
+msgstr "Umgebungsvariable"
+
+#: menuet/CommandEditor.py:496
+msgid "Variable"
+msgstr "Variable"
+
+#: menuet/CommandEditor.py:505
+msgid "Value"
+msgstr "Wert"
+
+#: menuet/CommandEditor.py:549
+msgid "Spaces not permitted in environment variables"
+msgstr "Leerzeichen in Umgebungsvariablen nicht zulässig"
+
+#: menuet/CommandEditor.py:622
+msgid "Select an executable"
+msgstr "Ausführbare Datei auswählen"
+
+#: menuet/CommandEditor.py:677
+msgid "Select an application"
+msgstr "Anwendung auswählen"
+
+#: menuet/Dialogs.py:29
+msgid "About Menuet"
+msgstr "Über Menuet"
+
+#: menuet/Dialogs.py:61 menuet/Dialogs.py:93
 msgid "Save Changes"
 msgstr "Änderungen speichern"
 
-#. Translators: Save On Close Dialog, primary text.
-#: ../menulibre/Dialogs.py:93
+#: menuet/Dialogs.py:63
 msgid "Do you want to save the changes before closing?"
-msgstr "Wollen Sie die Änderungen vor dem Schließen speichern?"
+msgstr "Möchten Sie die Änderungen vor dem Schließen speichern?"
 
-#. Translators: Save On Close Dialog, secondary text.
-#. Translators: Save On Leave Dialog, primary text.
-#: ../menulibre/Dialogs.py:95 ../menulibre/Dialogs.py:124
+#: menuet/Dialogs.py:65 menuet/Dialogs.py:97
 msgid "If you don't save the launcher, all the changes will be lost."
-msgstr ""
-"Wenn der Starter nicht gespeichert wird, werden alle Änderungen verworfen."
+msgstr "Wenn Sie den Starter nicht speichern, gehen alle Änderungen verloren."
 
-#. Translators: Save On Close Dialog, don't save, then close.
-#. Translators: Save On Leave Dialog, don't save, then leave.
-#: ../menulibre/Dialogs.py:99 ../menulibre/Dialogs.py:128
+#: menuet/Dialogs.py:68 menuet/Dialogs.py:100
 msgid "Don't Save"
 msgstr "Nicht speichern"
 
-#. Translators: Save On Leave Dialog, primary text.
-#: ../menulibre/Dialogs.py:121
+#: menuet/Dialogs.py:72 menuet/Dialogs.py:104 menuet/Dialogs.py:287
+#: menuet/MenuetApplication.py:434 menuet/MenuetApplication.py:591
+msgid "Save"
+msgstr "Speichern"
+
+#: menuet/Dialogs.py:95
 msgid "Do you want to save the changes before leaving this launcher?"
 msgstr ""
-"Sollen die Änderungen gespeichert werden, vor dem Verlassen des Starters?"
+"Möchten Sie die Änderungen speichern, bevor Sie diesen Starter verlassen?"
 
-#. Translations: Delete Dialog, secondary text. Notifies user that
-#. the file cannot be restored once deleted.
-#: ../menulibre/Dialogs.py:149
+#: menuet/Dialogs.py:126
 msgid "This cannot be undone."
-msgstr "Das kann nicht rückgängig gemacht werden."
+msgstr "Dies kann nicht rückgängig gemacht werden."
 
-#. Translators: Revert Dialog, window title.
-#. Translators: Revert Dialog, confirmation button.
-#: ../menulibre/Dialogs.py:160 ../menulibre/Dialogs.py:171
+#: menuet/Dialogs.py:142 menuet/Dialogs.py:155
 msgid "Restore Launcher"
 msgstr "Starter wiederherstellen"
 
-#. Translators: Revert Dialog, primary text. Confirmation to revert
-#. all changes since the last file save.
-#: ../menulibre/Dialogs.py:163
+#: menuet/Dialogs.py:145
 msgid "Are you sure you want to restore this launcher?"
-msgstr "Soll der Starter wirklich wiederhergestellt werden?"
+msgstr "Sind Sie sicher, dass Sie diesen Starter wiederherstellen möchten?"
 
-#. Translators: Revert Dialog, secondary text.
-#: ../menulibre/Dialogs.py:165
+#: menuet/Dialogs.py:148
 msgid ""
 "All changes since the last saved state will be lost and cannot be restored "
 "automatically."
 msgstr ""
-"Alle Änderung seit dem letzten Speichern werden verloren gehen und können "
-"nicht mehr automatisch wiederhergestellt werden."
+"Alle Änderungen seit dem letzten gespeicherten Zustand gehen verloren und "
+"können nicht automatisch wiederhergestellt werden."
 
-#. Translators: File Chooser Dialog, confirmation button.
-#: ../menulibre/Dialogs.py:191 ../menulibre/MenulibreIconSelection.py:82
-msgid "OK"
-msgstr "OK"
-
-#. Translators: Launcher Removed Dialog, primary text. Indicates that
-#. the selected application is no longer installed.
-#: ../menulibre/Dialogs.py:198
+#: menuet/Dialogs.py:177
 msgid "No Longer Installed"
 msgstr "Nicht mehr installiert"
 
-#. Translators: Launcher Removed Dialog, secondary text.
-#: ../menulibre/Dialogs.py:200
+#: menuet/Dialogs.py:180
 msgid ""
 "This launcher has been removed from the system.\n"
 "Selecting the next available item."
 msgstr ""
-"Dieser Starter wurde vom System entfernt.\n"
-"Nächstes verfügbares Element wird gewählt."
+"Dieser Starter wurde aus dem System entfernt.\n"
+"Das nächste verfügbare Element wird ausgewählt."
 
-#. Translators: Not Found In PATH Dialog, primary text. Indicates
-#. that the provided script was not found in any PATH directory.
-#: ../menulibre/Dialogs.py:214
+#: menuet/Dialogs.py:200
 #, python-format
 msgid "Could not find \"%s\" in your PATH."
-msgstr "»%s« kann nicht im PFAD gefunden werden."
+msgstr "\"%s\" wurde in Ihrem PATH nicht gefunden."
 
-#. Translators: Save Error Dialog, primary text.
-#: ../menulibre/Dialogs.py:232
+#: menuet/Dialogs.py:223
 #, python-format
 msgid "Failed to save \"%s\"."
-msgstr "Speichern von »%s« ist fehlgeschlagen."
+msgstr "Fehler beim Speichern von \"%s\"."
 
-#. Translators: Save Error Dialog, secondary text.
-#: ../menulibre/Dialogs.py:235
+#: menuet/Dialogs.py:225
 msgid "Do you have write permission to the file and directory?"
 msgstr "Haben Sie Schreibrechte für die Datei und das Verzeichnis?"
 
-#. Translators: Identify Window Dialog, secondary text. The selected
-#. application is displayed in the placeholder text.
-#: ../menulibre/Dialogs.py:254
+#: menuet/Dialogs.py:246
+msgid "Confirm Registration"
+msgstr "Registrierung bestätigen"
+
+#: menuet/Dialogs.py:249
+msgid ""
+"This launcher matches XDG specifications. Do you want to register it into "
+"the main menu?"
+msgstr ""
+"Dieser Starter entspricht den XDG-Spezifikationen. Möchten Sie ihn im "
+"Hauptmenü registrieren?"
+
+#: menuet/Dialogs.py:267
+msgid "Duplicate Found"
+msgstr "Duplikat gefunden"
+
+#: menuet/Dialogs.py:270
+msgid "category"
+msgstr "Kategorie"
+
+#: menuet/Dialogs.py:270
+msgid "launcher"
+msgstr "Starter"
+
+#: menuet/Dialogs.py:274
 #, python-format
-msgid "Click on the main application window for '%s'."
-msgstr "Klicken Sie auf das Hauptanwendungsfenster für '%s'."
+msgid "A %s with the same name already exists. Do you want to save it anyway?"
+msgstr ""
+"Ein(e) %s mit demselben Namen existiert bereits. Möchten Sie ihn/sie "
+"trotzdem speichern?"
 
-#. Translators: Separator menu item
-#: ../menulibre/MenuEditor.py:91 ../menulibre/MenulibreApplication.py:1215
-#: ../menulibre/MenulibreApplication.py:1713
+#: menuet/Dialogs.py:280
+msgid ""
+"If you proceed, a unique ID will be appended to the filename to avoid "
+"overwriting."
+msgstr ""
+"Wenn Sie fortfahren, wird dem Dateinamen eine eindeutige ID angehängt, um "
+"ein Überschreiben zu verhindern."
+
+#: menuet/Dialogs.py:308
+msgid "Validation Failed"
+msgstr "Überprüfung fehlgeschlagen"
+
+#: menuet/Dialogs.py:311
+msgid "Required entry fields are missing or do not match XDG specifications."
+msgstr ""
+"Erforderliche Eingabefelder fehlen oder entsprechen nicht den XDG-"
+"Spezifikationen."
+
+#: menuet/Dialogs.py:315
+msgid ""
+"This item has been isolated and placed back into the Menuet temporary area."
+msgstr ""
+"Dieses Element wurde isoliert und in den temporären Menuet-Bereich "
+"zurückgelegt."
+
+#: menuet/Dialogs.py:334
+msgid "Unsupported Desktop Environment"
+msgstr "Nicht unterstützte Desktop-Umgebung"
+
+#: menuet/Dialogs.py:337
+msgid "Menuet only supports Linux Mint's Cinnamon desktop."
+msgstr "Menuet unterstützt nur den Cinnamon-Desktop von Linux Mint."
+
+#: menuet/Dialogs.py:341
+msgid ""
+"This build of Menuet requires the Cinnamon desktop environment running on "
+"Linux Mint. It cannot guarantee correct menu behavior elsewhere. Menuet will "
+"now close."
+msgstr ""
+"Diese Version von Menuet erfordert die unter Linux Mint ausgeführte Cinnamon-"
+"Desktop-Umgebung. Ein korrektes Menüverhalten an anderer Stelle kann nicht "
+"garantiert werden. Menuet wird nun geschlossen."
+
+#: menuet/FieldLabel.py:42
+#, python-format
+msgid "More information about <i>%s</i>"
+msgstr "Weitere Informationen über <i>%s</i>"
+
+#: menuet/FilenameLabel.py:47
+msgid "Copy"
+msgstr "Kopieren"
+
+#: menuet/IconEntry.py:37
+msgid "Browse Icons…"
+msgstr "Symbole durchsuchen…"
+
+#: menuet/IconEntry.py:41
+msgid "Browse Files…"
+msgstr "Dateien durchsuchen…"
+
+#: menuet/IconEntry.py:124
+#, python-format
+msgid "<i>Missing icon:</i> %s"
+msgstr "<i>Fehlendes Symbol:</i> %s"
+
+#: menuet/IconEntry.py:157
+msgid "Select an image"
+msgstr "Ein Bild auswählen"
+
+#: menuet/IconEntry.py:174
+msgid "Images"
+msgstr "Bilder"
+
+#: menuet/IconEntry.py:190
+msgid "Select an icon"
+msgstr "Ein Symbol auswählen"
+
+#: menuet/MenuEditor.py:264 menuet/MenuEditor.py:267
+#: menuet/MenuetApplication.py:870 menuet/MenuetApplication.py:1180
+#: menuet/MenuetApplication.py:1183
 msgid "Separator"
-msgstr "Trennlinie"
+msgstr "Trennzeile"
 
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:49
-msgid "Multimedia"
-msgstr "Multimedia"
+#: menuet/MenuEditor.py:562 menuet/MenuetApplication.py:901
+msgid "Unregistered Apps"
+msgstr "Nicht registrierte Anwendungen"
 
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:51
-msgid "Development"
-msgstr "Entwicklung"
+#: menuet/MenuetApplication.py:110
+msgid "Search"
+msgstr "Suchen"
 
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:53
-msgid "Education"
-msgstr "Bildung"
+#: menuet/MenuetApplication.py:166
+msgid "Add _Launcher"
+msgstr "_Starter hinzufügen"
 
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:55
-msgid "Games"
-msgstr "Spiele"
+#: menuet/MenuetApplication.py:167
+msgid "Add _Directory"
+msgstr "_Verzeichnis hinzufügen"
 
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:57
-msgid "Graphics"
-msgstr "Grafik"
+#: menuet/MenuetApplication.py:168
+msgid "Add _Separator"
+msgstr "_Trennzeile hinzufügen"
 
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:59
-msgid "Internet"
-msgstr "Internet"
+#: menuet/MenuetApplication.py:216
+msgid "Menuet cannot be run as root."
+msgstr "Menuet kann nicht als Root ausgeführt werden."
 
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:61
-msgid "Office"
-msgstr "Büro"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:63
-msgid "Settings"
-msgstr "Einstellungen"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:65
-msgid "System"
-msgstr "System"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:67
-msgid "Accessories"
-msgstr "Zubehör"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:69
-msgid "WINE"
-msgstr "WINE"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:71
-msgid "Desktop configuration"
-msgstr "Schreibtischkonfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:73
-msgid "User configuration"
-msgstr "Benutzerkonfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:75
-msgid "Hardware configuration"
-msgstr "Hardware-Konfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:77
-msgid "GNOME application"
-msgstr "GNOME-Anwendungen"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:79
-msgid "GTK+ application"
-msgstr "GTK+Anwendungen"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:81
-msgid "GNOME user configuration"
-msgstr "GNOME-Benutzerkonfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:83
-msgid "GNOME hardware configuration"
-msgstr "GNOME-Hardware-Konfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:85
-#: ../menulibre/MenulibreApplication.py:87
-msgid "GNOME system configuration"
-msgstr "GNOME-Systemkonfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:89
-#: ../menulibre/MenulibreApplication.py:91
-msgid "Xfce menu item"
-msgstr "Xfce-Menüeintrag"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:93
-msgid "Xfce toplevel menu item"
-msgstr "Xfce oberster Menüeintrag"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:95
-msgid "Xfce user configuration"
-msgstr "Xfce-Benutzerkonfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:97
-msgid "Xfce hardware configuration"
-msgstr "Xfce-Hardware-Konfiguration"
-
-#. Translators: Launcher category description
-#: ../menulibre/MenulibreApplication.py:99
-#: ../menulibre/MenulibreApplication.py:101
-msgid "Xfce system configuration"
-msgstr "Xfce-Systemkonfiguration"
-
-#. Translators: "Other" category group. This item is only displayed for
-#. unknown or non-standard categories.
-#: ../menulibre/MenulibreApplication.py:154
-#: ../menulibre/MenulibreApplication.py:201
-msgid "Other"
-msgstr "Weitere"
-
-#. Translators: This error is displayed when the application is run
-#. as a root user. The application exits once the dialog is
-#. dismissed.
-#: ../menulibre/MenulibreApplication.py:263
-msgid "MenuLibre cannot be run as root."
-msgstr "MenuLibre kann nicht als Systemverwalter ausgeführt werden."
-
-#. Translators: This link goes to the online documentation with more
-#. information.
-#: ../menulibre/MenulibreApplication.py:269
+#: menuet/MenuetApplication.py:224
 #, python-format
 msgid ""
 "Please see the <a href='%s'>online documentation</a> for more information."
 msgstr ""
-"Für weitere Informationen, bitte die <a href='%s'>Internetdokumentation</a> "
-"beachten."
+"Weitere Informationen finden Sie in der <a href='%s'>Online-Dokumentation</"
+"a>."
 
-#. Translators: Add Launcher action label
-#: ../menulibre/MenulibreApplication.py:390
+#: menuet/MenuetApplication.py:242
+msgid "Menuet failed to load."
+msgstr "Menuet konnte nicht geladen werden."
+
+#: menuet/MenuetApplication.py:250
+#, python-format
+msgid ""
+"The default menu could not be found. Please see the <a href='%s'>online "
+"documentation</a> for more information."
+msgstr ""
+"Das Standardmenü wurde nicht gefunden. Weitere Informationen finden Sie in "
+"der <a href='%s'>Online-Dokumentation</a>."
+
+#: menuet/MenuetApplication.py:257
+msgid "Diagnostics"
+msgstr "Diagnose"
+
+#: menuet/MenuetApplication.py:402
 msgid "Add _Launcher…"
-msgstr "_Starter hinzufügen …"
+msgstr "_Starter Hinzufügen…"
 
-#. Translators: Add Launcher action tooltip
-#: ../menulibre/MenulibreApplication.py:392
+#: menuet/MenuetApplication.py:404
 msgid "Add Launcher…"
-msgstr "Starter hinzufügen …"
+msgstr "Starter Hinzufügen…"
 
-#. Translators: Add Directory action label
-#: ../menulibre/MenulibreApplication.py:399
+#: menuet/MenuetApplication.py:412
 msgid "Add _Directory…"
-msgstr "_Ordner hinzufügen …"
+msgstr "_Verzeichnis Hinzufügen…"
 
-#. Translators: Add Directory action tooltip
-#: ../menulibre/MenulibreApplication.py:401
+#: menuet/MenuetApplication.py:414
 msgid "Add Directory…"
-msgstr "Ordner hinzufügen …"
+msgstr "Verzeichnis Hinzufügen…"
 
-#. Translators: Add Separator action label
-#: ../menulibre/MenulibreApplication.py:408
+#: menuet/MenuetApplication.py:422
 msgid "_Add Separator…"
-msgstr "_Trennlinie hinzufügen …"
+msgstr "_Trennzeile Hinzufügen…"
 
-#. Translators: Add Separator action tooltip
-#: ../menulibre/MenulibreApplication.py:410
+#: menuet/MenuetApplication.py:424
 msgid "Add Separator…"
-msgstr "Trennlinie hinzufügen …"
+msgstr "Trennzeile Hinzufügen…"
 
-#. Translators: Save Launcher action label
-#: ../menulibre/MenulibreApplication.py:417
+#: menuet/MenuetApplication.py:432
 msgid "_Save"
 msgstr "_Speichern"
 
-#. Translators: Undo action label
-#: ../menulibre/MenulibreApplication.py:426
+#: menuet/MenuetApplication.py:442
 msgid "_Undo"
 msgstr "_Rückgängig"
 
-#. Translators: Redo action label
-#: ../menulibre/MenulibreApplication.py:435
+#: menuet/MenuetApplication.py:444 menuet/MenuetApplication.py:595
+msgid "Undo"
+msgstr "Rückgängig"
+
+#: menuet/MenuetApplication.py:452
 msgid "_Redo"
-msgstr "_Wiederholen"
+msgstr "_Wiederherstellen"
 
-#. Translators: Revert action label
-#: ../menulibre/MenulibreApplication.py:444
+#: menuet/MenuetApplication.py:454 menuet/MenuetApplication.py:596
+msgid "Redo"
+msgstr "Wiederherstellen"
+
+#: menuet/MenuetApplication.py:462
 msgid "_Revert"
-msgstr "_Zurücknehmen"
+msgstr "_Zurücksetzen"
 
-#. Translators: Execute action label
-#: ../menulibre/MenulibreApplication.py:453
-msgid "_Execute"
-msgstr "_Ausführen"
-
-#. Translators: Execute action tooltip
-#: ../menulibre/MenulibreApplication.py:455
-msgid "Execute Launcher"
-msgstr "Starter ausführen"
-
-#. Translators: Delete action label
-#: ../menulibre/MenulibreApplication.py:462
+#: menuet/MenuetApplication.py:471
 msgid "_Delete"
 msgstr "_Löschen"
 
-#. Translators: Quit action label
-#: ../menulibre/MenulibreApplication.py:471
+#: menuet/MenuetApplication.py:473
+msgid "Delete"
+msgstr "Löschen"
+
+#: menuet/MenuetApplication.py:480
+msgid "Reload _Treeview"
+msgstr "_Baumansicht neu laden"
+
+#: menuet/MenuetApplication.py:482
+msgid "Refresh and reload cache database"
+msgstr "Cache-Datenbank aktualisieren und neu laden"
+
+#: menuet/MenuetApplication.py:489
+msgid "_Register Cinnamon Menu"
+msgstr "Cinnamon Menu _Registrieren"
+
+#: menuet/MenuetApplication.py:491
+msgid "Register and display launcher in Cinnamon Menu"
+msgstr "Launcher im Cinnamon-Menü registrieren und anzeigen"
+
+#: menuet/MenuetApplication.py:498
+msgid "_Unregister Cinnamon Menu"
+msgstr "Cinnamon Menu _Deregistrieren"
+
+#: menuet/MenuetApplication.py:500
+msgid "Unregister and hide launcher from the Cinnamon Menu"
+msgstr "Launcher aus dem Cinnamon-Menü abmelden und ausblenden"
+
+#: menuet/MenuetApplication.py:507
+msgid "Restart Cinnamon _Shell"
+msgstr "_Cinnamon-Shell neu starten"
+
+#: menuet/MenuetApplication.py:509
+msgid "Restart Cinnamon Shell and reload desktop environment"
+msgstr "Cinnamon-Shell neu starten und Desktop-Umgebung neu laden"
+
+#: menuet/MenuetApplication.py:516
 msgid "_Quit"
 msgstr "_Beenden"
 
-#. Translators: Quit action tooltip
-#: ../menulibre/MenulibreApplication.py:473
-#: ../menulibre/MenulibreApplication.py:2243
+#: menuet/MenuetApplication.py:518 menuet/MenuetApplication.py:2116
 msgid "Quit"
 msgstr "Beenden"
 
-#. Translators: Help action label
-#: ../menulibre/MenulibreApplication.py:480
-msgid "_Contents"
-msgstr "_Hilfethemen"
-
-#. Translators: Help action tooltip
-#: ../menulibre/MenulibreApplication.py:482
-#: ../menulibre/MenulibreApplication.py:2241
-msgid "Help"
-msgstr "Hilfe"
-
-#. Translators: About action label
-#: ../menulibre/MenulibreApplication.py:489
+#: menuet/MenuetApplication.py:526
 msgid "_About"
 msgstr "_Über"
 
-#. Translators: About action tooltip
-#: ../menulibre/MenulibreApplication.py:491
-#: ../menulibre/MenulibreApplication.py:2242
+#: menuet/MenuetApplication.py:528 menuet/MenuetApplication.py:2115
 msgid "About"
 msgstr "Über"
 
-#. Translators: "Categories" launcher section
-#: ../menulibre/MenulibreApplication.py:634
-msgid "Categories"
-msgstr "Kategorien"
+#: menuet/MenuetApplication.py:560
+msgid "Your applications menu may need to be restarted."
+msgstr "Ihr Anwendungsmenü muss möglicherweise neu gestartet werden."
 
-#. Translators: "Actions" launcher section
-#: ../menulibre/MenulibreApplication.py:637
-msgid "Actions"
-msgstr "Aktionen"
+#: menuet/MenuetApplication.py:565
+msgid "Restart menu..."
+msgstr "Menü neu starten..."
 
-#. Translators: "Advanced" launcher section
-#: ../menulibre/MenulibreApplication.py:640
-msgid "Advanced"
-msgstr "Fortgeschritten"
+#: menuet/MenuetApplication.py:587
+msgid "Add..."
+msgstr "Hinzufügen..."
 
-#. Translators: Launcher-specific categories, camelcase "This Entry"
-#: ../menulibre/MenulibreApplication.py:801
-msgid "ThisEntry"
-msgstr "Dieser Eintrag"
+#: menuet/MenuetApplication.py:603 menuet/MenuetApplication.py:1012
+#: menuet/MenuetApplication.py:1028
+msgid "Delete..."
+msgstr "Löschen..."
 
-#. Translators: Placeholder text for the launcher-specific category
-#. selection.
-#: ../menulibre/MenulibreApplication.py:822
-msgid "Select a category"
-msgstr "Eine Kategorie auswählen"
+#: menuet/MenuetApplication.py:606
+msgid "Reload Treeview"
+msgstr "Baumansicht neu laden"
 
-#. Translators: "Category Name" tree column header
-#: ../menulibre/MenulibreApplication.py:826
-msgid "Category Name"
-msgstr "Kategorienname"
+#: menuet/MenuetApplication.py:609
+msgid "Register Cinnamon Menu"
+msgstr "Cinnamon Menu Registrieren"
 
-#. Translators: "This Entry" launcher-specific category group
-#: ../menulibre/MenulibreApplication.py:929
-msgid "This Entry"
-msgstr "Dieser Eintrag"
+#: menuet/MenuetApplication.py:612
+msgid "Unregister Cinnamon Menu"
+msgstr "Cinnamon Menu Deregistrieren"
 
-#. Translators: Placeholder text for a newly created action
-#: ../menulibre/MenulibreApplication.py:990
-msgid "New Shortcut"
-msgstr "Neue Tastenkombination"
+#: menuet/MenuetApplication.py:615
+msgid "Restart Cinnamon Shell"
+msgstr "Cinnamon-Shell neu starten"
 
-#. Translators: File Chooser Dialog, window title.
-#: ../menulibre/MenulibreApplication.py:1140
-msgid "Select a working directory"
-msgstr "Einen Arbeitsordner auswählen …"
+#: menuet/MenuetApplication.py:1015 menuet/MenuetApplication.py:1042
+msgid "You cannot delete this file while a search is active."
+msgstr "Sie können diese Datei nicht löschen, während eine Suche aktiv ist."
 
-#. Translators: File Chooser Dialog, window title.
-#: ../menulibre/MenulibreApplication.py:1144
-msgid "Select an executable…"
-msgstr "Eine ausführbare Datei auswählen …"
-
-#. Translators: This error is displayed when the user does not
-#. have sufficient file system permissions to delete the
-#. selected file.
-#: ../menulibre/MenulibreApplication.py:1391
+#: menuet/MenuetApplication.py:1035
 msgid "You do not have permission to delete this file."
-msgstr "Sie haben keine Berechtigung diese Datei zu löschen."
+msgstr "Sie haben keine Berechtigung zum Löschen dieser Datei."
 
-#. Translators: Placeholder text for a newly created launcher.
-#: ../menulibre/MenulibreApplication.py:1639
+#: menuet/MenuetApplication.py:1078 menuet/MenuetXdg.py:34
 msgid "New Launcher"
 msgstr "Neuer Starter"
 
-#. Translators: Placeholder text for a newly created launcher's
-#. description.
-#: ../menulibre/MenulibreApplication.py:1642 ../menulibre/MenulibreXdg.py:49
-msgid "A small descriptive blurb about this application."
-msgstr "Eine Kurzbeschreibung dieser Anwendung"
-
-#. Translators: Placeholder text for a newly created directory.
-#: ../menulibre/MenulibreApplication.py:1692
+#: menuet/MenuetApplication.py:1145
 msgid "New Directory"
-msgstr "Neuer Ordner"
+msgstr "Neues Verzeichnis"
 
-#. Translators: Placeholder text for a newly created directory's
-#. description.
-#: ../menulibre/MenulibreApplication.py:1695
-msgid "A small descriptive blurb about this directory."
-msgstr "Eine kurze Beschreibung für dieses Verzeichnis."
+#: menuet/MenuetApplication.py:1761
+msgid "Refresh Cinnamon Menu"
+msgstr "Cinnamon-Menü aktualisieren"
 
-#. Translators: Confirmation dialog to delete the selected
-#. separator.
-#: ../menulibre/MenulibreApplication.py:2120
+#: menuet/MenuetApplication.py:1763
+msgid "Do you want to restart the Cinnamon Menu Shell to apply the changes?"
+msgstr ""
+"Möchten Sie die Cinnamon-Menü-Shell neu starten, um die Änderungen zu "
+"übernehmen?"
+
+#: menuet/MenuetApplication.py:1766
+msgid ""
+"This will restart the Cinnamon Menu Shell using 'cinnamon --replace' and "
+"apply the current menu changes. The screen may briefly flicker during the "
+"restart."
+msgstr ""
+"Dadurch wird die Cinnamon-Menü-Shell mit 'cinnamon --replace' neu gestartet "
+"und die aktuellen Menüänderungen werden übernommen. Der Bildschirm kann "
+"während des Neustarts kurz flackern."
+
+#: menuet/MenuetApplication.py:2033
 msgid "Are you sure you want to delete this separator?"
-msgstr "Sind Sie sicher, dass Sie diese Trennlinie löschen möchten?"
+msgstr "Sind Sie sicher, dass Sie diese Trennzeile löschen möchten?"
 
-#. Translators: Confirmation dialog to delete the selected launcher.
-#: ../menulibre/MenulibreApplication.py:2124
+#: menuet/MenuetApplication.py:2037
 #, python-format
 msgid "Are you sure you want to delete \"%s\"?"
-msgstr "Sind Sie sicher, dass Sie »%s« löschen wollen?"
+msgstr "Sind Sie sicher, dass Sie \"%s\" löschen möchten?"
 
-#. Translators: Menu item to open the Parsing Errors dialog.
-#: ../menulibre/MenulibreApplication.py:2236
-msgid "Parsing Error Log"
-msgstr "Analysefehlerprotokoll"
-
-#. Translators: File Chooser Dialog, window title.
-#: ../menulibre/MenulibreIconSelection.py:78
-msgid "Select an image…"
-msgstr "Bitte Bild auswählen …"
-
-#. Translators: "Images" file chooser dialog filter
-#: ../menulibre/MenulibreIconSelection.py:87
-msgid "Images"
-msgstr "Bilder"
-
-#. Translators: "Search Results" treeview column header
-#: ../menulibre/MenulibreTreeview.py:64
+#: menuet/MenuetTreeview.py:75
 msgid "Search Results"
 msgstr "Suchergebnisse"
 
-#. Translators: Placeholder text for a new menu item name.
-#: ../menulibre/MenulibreXdg.py:46
-msgid "New Menu Item"
-msgstr "Neuer Menüeintrag"
+#: menuet/MenuetTreeview.py:135 menuet/MenuetTreeview.py:136
+msgid "Sort Alphabetically"
+msgstr "Alphabetisch sortieren"
 
-#. Translators: This error is displayed when a desktop file cannot
-#. be correctly read by MenuLibre. A (possibly untranslated) error
-#. code is displayed.
-#: ../menulibre/util.py:621
-#, python-format
-msgid "Unable to load desktop file due to the following error: %s"
+#: menuet/ParsingErrorsDialog.py:25
+msgid "Parsing Errors"
+msgstr "Analysefehler"
+
+#: menuet/ParsingErrorsDialog.py:31
+msgid "Close"
+msgstr "Schließen"
+
+#: menuet/ParsingErrorsDialog.py:52
+msgid ""
+"The following desktop files have failed parsing by the underlying library, "
+"and will therefore not show up in Menuet.\n"
+"Please investigate these problems with the associated package maintainer."
 msgstr ""
-"Schreibtischdatei konnte aufgrund des folgenden Fehlers nicht geladen "
-"werden: %s"
+"Die folgenden Desktop-Dateien konnten von der zugrundeliegenden Bibliothek "
+"nicht analysiert werden und werden daher nicht in Menuet angezeigt.\n"
+"Bitte untersuchen Sie diese Probleme mit dem zuständigen Paketbetreuer."
 
-#. Translators: This error is displayed when the first group in a
-#. failing desktop file is incorrect. "Start group" can be safely
-#. translated.
-#: ../menulibre/util.py:636
-#, python-format
-msgid "Start group is invalid - currently '%s', should be '%s'"
-msgstr "Startgruppe ist ungültig – zur Zeit »%s«, sollte »%s« sein."
+#: menuet/ParsingErrorsDialog.py:128
+msgid "Open containing folder"
+msgstr "Enthaltenen Ordner öffnen"
 
-#. Translators: This error is displayed when a required key is
-#. missing in a failing desktop file.
-#: ../menulibre/util.py:646
+#: menuet/ParsingErrorsDialog.py:135
+msgid "Open in text editor"
+msgstr "In Texteditor öffnen"
+
+#: menuet/ParsingErrorsDialog.py:142
+msgid "Copy file location"
+msgstr "Dateispeicherort kopieren"
+
+#: menuet/PathEntry.py:54
+msgid "Select a working directory"
+msgstr "Arbeitsverzeichnis auswählen"
+
+#: menuet/PathEntry.py:79
+msgid "OK"
+msgstr "OK"
+
+#: menuet/StartupWmClassEntry.py:30 menuet/StartupWmClassEntry.py:47
+msgid "Identify Window"
+msgstr "Fenster identifizieren"
+
+#: menuet/StartupWmClassEntry.py:50
+msgid "Click on the main application window for this launcher."
+msgstr "Klicken Sie auf das Hauptanwendungsfenster für diesen Starter."
+
+#: menuet/__init__.py:65
+msgid "Show debug messages"
+msgstr "Debug-Meldungen anzeigen"
+
+#: menuet/__init__.py:73
+msgid "Use headerbar layout (client side decorations)"
+msgstr "Headerbar-Layout verwenden (clientseitige Dekorationen)"
+
+#: menuet/__init__.py:81
+msgid "Use toolbar layout (server side decorations)"
+msgstr "Symbolleisten-Layout verwenden (serverseitige Dekorationen)"
+
+#: menuet/util.py:775
+msgid "File does not exist."
+msgstr "Datei existiert nicht."
+
+#: menuet/util.py:792
 #, python-format
 msgid "%s key not found"
 msgstr "%s-Schlüssel nicht gefunden"
 
-#. Translators: This error is displayed when a failing desktop file
-#. has an invalid value for the provided key.
-#: ../menulibre/util.py:651
+#: menuet/util.py:794
 #, python-format
 msgid "%s value is invalid - currently '%s', should be '%s'"
-msgstr "%s Wert ist ungültig - derzeit '%s', sollte '%s' sein"
+msgstr "%s-Wert ist ungültig - aktuell '%s', sollte '%s' sein"
 
-#: ../menulibre/util.py:680
+#: menuet/util.py:804
 #, python-format
-msgid "%s program '%s' has not been found in the PATH"
-msgstr "%s Das Programm '%s' wurde im Pfad nicht gefunden"
+msgid "%s program has not been found in the PATH"
+msgstr "%s-Programm wurde im PATH nicht gefunden"
 
-#: ../menulibre/util.py:683
+#: menuet/util.py:816 menuet/util.py:825
 #, python-format
-msgid ""
-"%s program '%s' is not a valid shell command according to "
-"GLib.shell_parse_argv, error: %s"
+msgid "Unable to load desktop file due to the following error: %s"
 msgstr ""
-"%s Das Programm '%s' ist kein gültiger Shell-Befehl gemäß "
-"GLib.shell_parse_argv, Fehler: %s"
-
-#. Translators: This error is displayed for a failing desktop file where
-#. errors were detected but the file seems otherwise valid.
-#: ../menulibre/util.py:689
-msgid "Unknown error. Desktop file appears to be valid."
-msgstr "Unbekannter Fehler. Die Schreibtischdatei scheint gültig zu sein."
+"Desktop-Datei konnte aufgrund des folgenden Fehlers nicht geladen werden: %s"

@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-only
+#   Menu Editor & Launcher Recovery for Linux Mint Cinnamon
+#   Copyright (C) 2012-2024 Sean Davis <sean@bluesabre.org>
+#   Copyright (C) 2016-2018 OmegaPhil <OmegaPhil@startmail.com>
+#   Copyright (C) 2026 schnee-and-tetra <308144300+schnee-tetra@users.noreply.github.com>
+import locale
+
+locale.textdomain("menuet")
+
+import os
+import os.path
+import sys
+
+import gi
+
+gi.require_version("CinnamonMenu", "3.0")
+gi.require_version("Gtk", "3.0")  # This seems to be needed for imported
+# menuet code
+
+
+# As with the main script, need to mess with the path to access menuet code
+# Get project root directory (enable symlink and trunk execution)
+PROJECT_ROOT_DIRECTORY = os.path.abspath(
+    os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0])))
+)
+
+# Add project root directory to python search path
+sys.path.append(PROJECT_ROOT_DIRECTORY)
+
+
+from menuet.MenuEditor import MenuEditor
+
+# Enable debug output from the GMenu library on stderr
+os.environ["MENU_VERBOSE"] = "1"
+
+# Create a GMenu object in the same way the real script does - menuet will
+# then hook into this script's stderr to pick up on the bad desktop files
+menu_editor = MenuEditor()
+menu_editor.unmap()

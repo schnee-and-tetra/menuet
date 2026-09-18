@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Menuet
+Comment=Manage and recover application launchers in Cinnamon Menu
+Comment[fr]=Gérer et récupérer les lanceurs d'applications dans Cinnamon Menu
+Comment[ja]=Cinnamon Menuのアプリケーションランチャーを管理・復旧
+Comment[de]=Anwendungsstarter in Cinnamon Menu verwalten und wiederherstellen
+Comment[it]=Gestisci e ripristina i launcher delle applicazioni in Cinnamon Menu
+Comment[es]=Gestiona y recupera los lanzadores de aplicaciones en Cinnamon Menu
+Comment[pt_BR]=Gerencie e recupere lançadores de aplicativos no Cinnamon Menu
+Comment[zh_CN]=管理和恢复 Cinnamon Menu 中的应用程序启动器
+Comment[zh_TW]=管理與復原 Cinnamon Menu 中的應用程式啟動器
+Icon=menuet
+Exec=menuet
+Categories=GTK;Settings;DesktopSettings;Utility;
+Keywords=Configuration;Menu;Launcher;Recovery;
+StartupNotify=true
+Terminal=false
+X-Ubuntu-Gettext-Domain=menuet

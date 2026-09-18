@@ -1,10 +1,29 @@
-.vscode
-ChangeLog
-MANIFEST
+# ────── Python Environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+AppDir/
 build/
 dist/
-menulibre.egg-info/
-menulibre/__pycache__/
-menulibre_lib/__pycache__/
-data/metainfo/menulibre.appdata.xml
+mo/
+*.egg
+
+# ────── Test & Output Data
+/output/
+/tmp/
+*.log
+*.tar.gz
+*.zip
+*.AppImage
+ruff.toml
+
+# ────── OS & IDE Metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 *~
+
+# ────── Others
+menuet.svg
+auto-translate.sh

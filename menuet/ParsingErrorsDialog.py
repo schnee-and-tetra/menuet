@@ -1,0 +1,151 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-only
+#   Menu Editor & Launcher Recovery for Linux Mint Cinnamon
+#   Copyright (C) 2012-2024 Sean Davis <sean@bluesabre.org>
+#   Copyright (C) 2016-2018 OmegaPhil <OmegaPhil@startmail.com>
+#   Copyright (C) 2026 schnee-and-tetra <308144300+schnee-tetra@users.noreply.github.com>
+import gettext
+
+_ = gettext.gettext
+
+import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import GObject, Gtk, Pango
+
+try:
+    from . import FileHandler
+except ImportError:
+    pass
+
+
+class ParsingErrorsDialog(Gtk.Dialog):
+    def __init__(self, parent, use_header_bar=False, demo_mode=False):
+        super().__init__(
+            title=_("Parsing Errors"),
+            transient_for=parent,
+            use_header_bar=use_header_bar,
+            flags=0,
+        )
+        self.add_buttons(
+            _("Close"),
+            Gtk.ResponseType.CLOSE,
+        )
+
+        self.set_default_size(900, 480)
+        # self.set_default_size(1240, 480)
+
+        box = Gtk.Box.new(orientation=Gtk.Orientation.VERTICAL, spacing=12)
+        box.set_margin_top(9)
+        box.set_margin_bottom(12)
+        box.set_margin_start(12)
+        box.set_margin_end(12)
+
+        message_area = Gtk.Box.new(orientation=Gtk.Orientation.HORIZONTAL, spacing=12)
+        box.pack_start(message_area, False, False, 0)
+
+        image = Gtk.Image.new_from_icon_name("dialog-warning", Gtk.IconSize.DIALOG)
+        message_area.pack_start(image, False, False, 0)
+
+        message = Gtk.Label.new(
+            _(
+                "The following desktop files have failed parsing by the underlying library, and will therefore not show up in Menuet.\n"
+                "Please investigate these problems with the associated package maintainer."
+            )
+        )
+        message.set_line_wrap(True)
+        message.set_xalign(0.0)
+        message_area.pack_start(message, True, True, 0)
+
+        scrolled = Gtk.ScrolledWindow.new(None, None)
+        scrolled.set_shadow_type(Gtk.ShadowType.IN)
+        box.pack_start(scrolled, True, True, 0)
+
+        self.listbox = Gtk.ListBox.new()
+        scrolled.add(self.listbox)
+
+        self.demo_mode = demo_mode
+        if self.demo_mode:
+            self.file_handler = None
+        else:
+            self.file_handler = FileHandler.FileHandler()
+
+        self.get_content_area().pack_start(box, True, True, 0)
+        self.show_all()
+
+    def add_item(self, filename, error):
+        row = ErrorRow(filename, error)
+        row.connect("action", self.on_row_action)
+        self.listbox.add(row)
+
+    def on_row_action(self, row, action, filename):
+        if self.demo_mode:
+            print(action, filename)
+            return
+        if self.file_handler is None:
+            return
+        if action == "open-folder":
+            self.file_handler.open_folder(filename)
+        elif action == "open-editor":
+            self.file_handler.open_editor(filename)
+        elif action == "copy-location":
+            self.file_handler.copy_to_clipboard(filename)
+
+
+class ErrorRow(Gtk.ListBoxRow):
+    __gsignals__ = {
+        "action": (
+            GObject.SignalFlags.RUN_FIRST,
+            None,
+            (
+                str,
+                str,
+            ),
+        ),
+    }
+
+    def __init__(self, filename, error):
+        super().__init__()
+
+        box = Gtk.Box.new(orientation=Gtk.Orientation.HORIZONTAL, spacing=12)
+        box.set_border_width(3)
+        box.set_margin_start(3)
+        box.set_margin_end(3)
+
+        label = Gtk.Label.new("")
+        label.set_xalign(0.0)
+        label.set_ellipsize(Pango.EllipsizeMode.START)
+        label.set_markup(f"<b>{filename}</b>\n{error}")
+        box.pack_start(label, True, True, 0)
+
+        buttons = Gtk.ButtonBox.new(orientation=Gtk.Orientation.HORIZONTAL)
+        buttons.set_layout(Gtk.ButtonBoxStyle.END)
+        context = buttons.get_style_context()
+        context.add_class("linked")
+        box.pack_end(buttons, False, False, 0)
+
+        button = Gtk.Button.new_from_icon_name("folder-symbolic", Gtk.IconSize.BUTTON)
+        button.set_tooltip_text(_("Open containing folder"))
+        button.connect("clicked", self.emit_action, filename, "open-folder")
+        buttons.add(button)
+
+        button = Gtk.Button.new_from_icon_name(
+            "text-editor-symbolic", Gtk.IconSize.BUTTON
+        )
+        button.set_tooltip_text(_("Open in text editor"))
+        button.connect("clicked", self.emit_action, filename, "open-editor")
+        buttons.add(button)
+
+        button = Gtk.Button.new_from_icon_name(
+            "edit-copy-symbolic", Gtk.IconSize.BUTTON
+        )
+        button.set_tooltip_text(_("Copy file location"))
+        button.connect("clicked", self.emit_action, filename, "copy-location")
+        buttons.add(button)
+
+        self.add(box)
+
+        self.show_all()
+
+    def emit_action(self, button, filename, action):
+        self.emit("action", action, filename)
